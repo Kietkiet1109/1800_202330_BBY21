@@ -7,7 +7,7 @@ This browser based web application to ...
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
 * 
-* 
+* Soomin Jeong: Excited to see how our first web project will come together
 * Kiet Ngo: Student with a passion for playing and making games
 	
 ## 3. Technologies and Resources Used
@@ -16,6 +16,7 @@ List technologies (with version numbers), API's, icons, fonts, images, media or 
 * Bootstrap 5.0 (Frontend library)
 * Firebase 8.0 (BAAS - Backend as a Service)
 * ...
+
 ## 4. Complete setup/installion/usage
 State what a user needs to do when they come to your project.  How do others start using your code or application?
 Here are the steps ...
