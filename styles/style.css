@@ -50,6 +50,23 @@ header {
     align-items: center;
 }
 
+.main_banner {
+    width: 80%;
+    height: 40vh;
+    /* background-color: gray; */
+    margin: 30px auto;
+}
+
+.main_img {
+    width: 100%;
+    height: 70%;
+}
+
+.desc {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
 .button_wrap {
     width: 100%;
     height: 30vh;
