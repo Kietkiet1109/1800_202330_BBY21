@@ -7,6 +7,7 @@ header {
     justify-content: space-between;
     align-items: center;
     font-size: 25px;
+    overflow: hidden;
 }
 
 .menu_wrap {
@@ -25,6 +26,13 @@ header {
 }
 
 .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+label {
     width: 60px;
     height: 60px;
     margin-left: 10px;
@@ -32,4 +40,31 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+#menu {
+    display: none;
+}
+
+.drop_down {
+    max-width: 500px;
+    width: 100%;
+    height: 0px;
+    padding: 0 20px;
+    background-color: #7FB069;
+    transition-duration: 0.5s;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.drop_down li {
+    margin-top: 10px;
+}
+
+#menu:checked~.drop_down {
+    height: 190px;
 }
