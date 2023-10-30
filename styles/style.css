@@ -1,8 +1,7 @@
 .main_banner {
     width: 80%;
     height: 40vh;
-    /* background-color: gray; */
-    margin: 30px auto;
+    margin: 40px auto 10px auto;
 }
 
 .main_img {
@@ -11,6 +10,7 @@
 }
 
 .desc {
+    padding: 0 10px;
     margin-top: 10px;
     font-size: 18px;
 }
