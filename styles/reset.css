@@ -1,0 +1,13 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+ul { list-style: none; }
+a { text-decoration: none; color: #041B15; display: block;}
+img { width: 100%; height: 100%; display: block; object-fit: cover; }
+body {
+    color: #041B15;
+}
+.wrap {
+    max-width: 500px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
