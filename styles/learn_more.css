@@ -34,25 +34,3 @@
 .con_wrap li:hover p {
     height: 20vh;
 }
-
-
-footer {
-    max-width: 500px;
-    width: 100%;
-    height: 40px;
-    background-color: #134611;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-}
-
-.footer_wrap {
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-footer a {
-    color: #fff;
-}
