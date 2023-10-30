@@ -1,0 +1,31 @@
+.leaderboard {
+    width: 80%;
+    height: 60vh;
+    background-color: #5f9944;
+    border-radius: 15px;
+    border: 1px solid #041B15;
+    margin: 3vh auto;
+    padding: 10px 10px;
+    font-size: 20px;
+    line-height: 60px;
+    overflow: hidden;
+}
+
+caption {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+caption i {
+    color: gold;
+}
+
+.leaderboard img {
+    width: 50px;
+    height: 50px;
+}
+
+thead {
+    color: #fff;
+}
