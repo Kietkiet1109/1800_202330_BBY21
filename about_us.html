@@ -1,63 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles\about_us.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div class="wrap">
-        <header>
-            <div class="logo">
-                <a href="index.html">LOGO</a>
-            </div>
-            <div class="menu_wrap">
-                <div class="login">
-                    <a href="login.html">Login</a>
-                </div>
-                <div class="menu">
-                    <input type="checkbox" id="menu" />
-                    <label for="menu"><i class="fa-solid fa-bars"></i></label>
-                    <ul class="drop_down">
-                        <li><a href="about_us.html">About us</a></li>
-                        <li><a href="learn_more.html">Why is Recycling Important?</a></li>
-                        <li><a href="learn_more.html">Local recycling instuctions</a></li>
-                        <li><a href="leaderboard.html">Leaderboard</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-
-        <!-- Contents for about us goes here -->
-
-        <footer>
-            <ul class="footer_wrap">
-                <li>
-                    <a href="learn_more.html">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Learn more
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <i class="fa-solid fa-house"></i>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-share"></i>
-                    Share
-                </li>
+      <header>
+        <div class="logo">
+          <a href="index.html">LOGO</a>
+        </div>
+        <div class="menu_wrap">
+          <div class="login">
+            <a href="login.html">Login</a>
+          </div>
+          <div class="menu">
+            <input type="checkbox" id="menu" />
+            <label for="menu"><i class="fa-solid fa-bars"></i></label>
+            <ul class="drop_down">
+              <li><a href="about_us.html">About us</a></li>
+              <li><a href="learn_more.html">Why is Recycling Important?</a></li>
+              <li><a href="learn_more.html">Local recycling instuctions</a></li>
+              <li><a href="leaderboard.html">Leaderboard</a></li>
             </ul>
-        </footer>
-    </div>
+          </div>
+        </div>
+      </header>
 
-</body>
+      <!-- Contents for about us goes here -->
+      <nav class="content">
+        <h1>About Us</h1>
+        <br />
+        <h3>Who we are?</h3>
+        <div class="picture">
+          <img src="images\img\picture1.png" id="picture1" alt="Soomin" />
+          <img src="images\img\picture2.png" id="picture2" alt="Phuong" />
+          <img src="images\img\picture3.png" id="picture3" alt="Kiet" />
+          <p class="name">Soomin</p>
+          <p class="name">Phuong</p>
+          <p class="name">Kiet</p>
+
+          <p class="role">Designer</p>
+          <p class="role">PM</p>
+          <p class="role">Coder</p>
+        </div>
+        <h3>Our story</h3>
+        <br />
+        <p>
+          Our team, BBY 21 is developing a game to help and educate users on how
+          to properly recycle, and figure out which recycling bin an item
+          belongs to. This can help reduce the environmental impact caused by
+          improper waste composition by providing the user with proper recycling
+          instructions.
+        </p>
+        <br /><br />
+        <p>
+          We hope you enjoy our app, and learn something related to recyling and
+          categorizing trash.
+        </p>
+      </nav>
+
+      <footer>
+        <ul class="footer_wrap">
+          <li>
+            <a href="learn_more.html">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Learn more
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </li>
+          <li>
+            <i class="fa-solid fa-share"></i>
+            Share
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>
