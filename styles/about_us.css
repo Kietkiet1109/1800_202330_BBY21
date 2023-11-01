@@ -1,8 +1,3 @@
-*{
-    height:auto;
-
-}
-
 .content{
     margin: 24px 16px 0 16px;
 }
@@ -14,13 +9,20 @@
     grid-gap: 3px;
     margin: 10px 0 24px 0;
 }
+
 #picture1, #picture2, #picture3{
     display: grid;
 }
+
 p{
     display: inline-block;
     
 }
+
 .name, .role{
     justify-self: center;
+}
+
+.name {
+    font-weight: 700;
 }
