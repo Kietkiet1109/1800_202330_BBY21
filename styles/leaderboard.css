@@ -36,15 +36,13 @@ tbody td {
     color: #fff;
 }
 
-<<<<<<< HEAD
-=======
 tr>td:nth-child(2) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+
 td img {
     border-radius: 50%;
     overflow: hidden;
 }
->>>>>>> f9e9e8fb54bca9346556e4747dc0bcd1668e6a8e
