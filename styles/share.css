@@ -1,0 +1,50 @@
+.main_banner {
+    width: 80%;
+    height: 40vh;
+    margin: 10px auto 0px auto;
+}
+
+.main_img {
+    width: 100%;
+    height: 70%;
+}
+
+.desc {
+    padding: 0 10px;
+    margin-top: 10px;   
+    font-size: 18px;
+}
+
+.button_wrap {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button_wrap li {
+    margin-top: 10px;
+    width: 60%;
+    padding: 5px 0;
+    background-color: #7FB069;
+    border: 1px solid #041B15;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.icon {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 5px 5px 5px 20px;
+    vertical-align: middle;
+}
+
+.button-text {
+    display: inline-block;
+    margin: 5px 5px 5px 5px;
+    text-align: center;
+    vertical-align: middle;
+}
