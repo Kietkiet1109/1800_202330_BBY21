@@ -96,3 +96,7 @@ label b {
 #tab_2:checked~#login {
     display: none;
 }
+
+b{
+    margin-left: 8px;
+}
