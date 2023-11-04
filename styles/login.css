@@ -1,3 +1,24 @@
+.con_wrap {
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.main_banner {
+    width: 50%;
+    height: 100%;
+    margin-top: 15vh;
+}
+
+.login_wrap {
+    width: 50%;
+    height: 100%;
+}
+
 .login_img_wrap {
     width: 25vh;
     height: 25vh;
@@ -16,13 +37,12 @@
     filter: hue-rotate(240deg);
 }
 
-.login_wrap {
+.input_wrap {
     width: 70%;
-    height: 35vh;
     margin: 0 auto;
 }
 
-.login_wrap>input {
+.input_wrap>input {
     display: none;
 }
 
@@ -31,6 +51,7 @@
     height: 100%;
     border: 1px solid #041B15;
     border-radius: 15px;
+    padding: 15px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,4 +120,14 @@ label b {
 
 b{
     margin-left: 8px;
+}
+
+@media screen and (max-width: 800px) {
+    .main_banner {
+        display: none;
+    }
+
+    .login_wrap {
+        width: 100%;
+    }
 }

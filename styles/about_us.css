@@ -1,22 +1,24 @@
-.content{
-    margin: 24px 16px 0 16px;
+.content {
+    padding: 24px 16px 0 16px;
 }
 
-.picture{
+.picture_wrap {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,0.5fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2fr 0.3fr 0.3fr;
     grid-gap: 3px;
     margin: 10px 0 24px 0;
 }
 
-#picture1, #picture2, #picture3{
-    display: grid;
+.picture {
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #7FB069;
 }
 
-p{
+p {
     display: inline-block;
-    
 }
 
 .name, .role{

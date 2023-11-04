@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles\about_us.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   </head>
   <body>
     <div class="wrap">
@@ -40,23 +35,31 @@
         </div>
       </header>
 
-      <!-- Contents for about us goes here -->
-      <nav class="content">
+      <div class="content">
         <h1>About Us</h1>
         <br />
         <h3>Who Are We?</h3>
-        <div class="picture">
-          <img src="img/picture1.png" id="picture1" alt="Soomin" />
-          <img src="img/picture2.png" id="picture2" alt="Phuong" />
-          <img src="img/picture3.png" id="picture3" alt="Kiet" />
-          <p class="name">Soomin Jeong</p>
-          <p class="name">Phuong Le (Yuri)</p>
-          <p class="name">Kiet Ngo</p>
 
-          <p class="role">Designer</p>
-          <p class="role">Project Manager</p>
-          <p class="role">Coder</p>
+        <div class="picture_wrap">
+          <div class="picture" id="picture1">
+            <img src="img/profile1.png" alt="Soomin" />
+          </div>
+          <div class="picture" id="picture2">
+            <img src="img/profile2.png" alt="Phuong" />
+          </div>
+          <div class="picture" id="picture3">
+            <img src="img/profile3.png" alt="Kiet" />
+          </div>
+          
+          <p class="name" id="name1">Soomin Jeong</p>
+          <p class="name"id="name2">Phuong Le (Yuri)</p>
+          <p class="name"id="name3">Kiet Ngo</p>
+
+          <p class="role" id="role1">Designer</p>
+          <p class="role" id="role2">Project Manager</p>
+          <p class="role" id="role3">Coder</p>
         </div>
+        
         <h3>Our story</h3>
         <br />
         <p>
@@ -71,7 +74,7 @@
           We hope you enjoy our app, and learn something new about to recyling and
           categorizing trash.
         </p>
-      </nav>
+      </div>
 
       <footer>
         <ul class="footer_wrap">

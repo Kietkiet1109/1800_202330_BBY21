@@ -9,8 +9,8 @@ body {
     font-family: 'Playpen Sans', cursive;
     font-family: 'Tilt Neon', sans-serif;
 }
+
 .wrap {
-    max-width: 500px;
     width: 100%;
     height: 100vh;
     margin: 0 auto;

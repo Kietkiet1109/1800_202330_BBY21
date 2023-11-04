@@ -1,3 +1,8 @@
+.desc {
+    width: 80%;
+    font-size: 20px;
+}
+
 .fa-square-facebook {
     color: #00008b;
 }
@@ -12,4 +17,15 @@
 
 .fa-link {
     color: rgb(83, 83, 83);
+}
+
+@media screen and (max-width: 700px) {
+    .desc {
+        height: 30%;
+        font-size: 18px;
+    }
+
+    .button_wrap {
+        height: 70%;
+    }
 }
