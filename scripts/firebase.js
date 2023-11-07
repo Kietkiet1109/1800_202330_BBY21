@@ -51,7 +51,7 @@ function register() {
 
             // Done
             alert('New account is created!')
-            window.location.assign("index.html");       //re-direct to main.html after signup
+            window.location.assign("login.html"); //re-direct to login.html after signup
         })
         .catch(function (error) {
             // Firebase will use this to alert of its errors
@@ -93,7 +93,7 @@ function login() {
 
             // DOne
             alert('You are now logged in!')
-            window.location.assign("index.html");       //re-direct to main.html after signup
+            window.location.assign("index.html"); //re-direct to index.html after signup
         })
         .catch(function (error) {
             // Firebase will use this to alert of its errors
@@ -140,7 +140,7 @@ function validate_field(field) {
 function logout() {
     firebase.auth().signOut().then(() => {
         // Sign-out successful.
-        console.log("logging out user");
+        console.log("You are now logged out!");
       }).catch((error) => {
         // An error happened.
       });
