@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="styles/footer.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
+    <script src="scripts/firebase.js"></script>
 </head>
 <body>
 
@@ -56,7 +64,7 @@
                         <input type="email" id="login_email" name="email" placeholder="Email" required="required"/>
                         <input type="password" id="login_pwd" name="pwd" placeholder="Password" required="required"/>
                         <input type="hidden" id="login_session" name="session" value=""/>
-                        <input type="submit" id="login_submit" name="submit" value="Log in"/>
+                        <input type="submit" id="login_submit" name="submit" value="Log in" onclick="login()"/>
                     </fieldset>
         
                     <fieldset class="login_template" id="signup">
@@ -65,7 +73,7 @@
                         <input type="email" id="signup_email" name="email" placeholder="Email" required="required"/>
                         <input type="password" id="signup_pwd" name="pwd" placeholder="Password" required="required"/>
                         <input type="hidden" id="signup_session" name="session" value=""/>
-                        <input type="submit" id="signup_submit" name="submit" value="Sign up"/>
+                        <input type="submit" id="signup_submit" name="submit" value="Sign up" onclick="register()"/>
                     </fieldset>
         
                     <div class="login_signup">
