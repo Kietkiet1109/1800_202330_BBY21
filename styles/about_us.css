@@ -4,14 +4,14 @@
 }
 
 .picture_wrap {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 20px 0;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 0.5fr);
     grid-template-rows: 5fr, 2fr;
     grid-gap: 20px;
-
+    justify-content: center;
+    text-align: center;
 }
 
 .picture {
@@ -20,16 +20,16 @@
     background-color: #7FB069;
 }
 h1{
-    font-size: 50px;
+    font-size: 25px;
 }
 p,h3 {
     display: inline-block;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .name, .role {
     justify-self: center;
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .name {
@@ -63,7 +63,7 @@ p,h3 {
         justify-self: center;
     }
 
-    h1 {
+    /* h1 {
         font-size: 60px;
     }
 
@@ -77,6 +77,6 @@ p,h3 {
 
     .role {
         font-size: 35px;
-    }
+    } */
 
 }
