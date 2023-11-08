@@ -1,12 +1,12 @@
 header {
     width: 100%;
-    height: 60px;
+    height: 80px;
     padding: 0 20px;
     background-color: #7FB069;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 25px;
+    font-size: 32px;
     overflow: hidden;
 }
 
@@ -23,7 +23,7 @@ header {
     border-radius: 20px;
     border: 1px solid #041B15;
     background-color: #fff;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
 }
 
@@ -69,5 +69,5 @@ label {
 }
 
 #menu:checked~.drop_down {
-    height: 190px;
+    height: 220px;
 }
