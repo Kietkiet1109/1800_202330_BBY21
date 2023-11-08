@@ -41,7 +41,7 @@
 
 .button_wrap>li {
     margin-bottom: 20px;
-    width: 60%;
+    width: 65%;
     padding: 8px 0;
     background-color: #7FB069;
     border: 1px solid #041B15;
@@ -83,4 +83,16 @@
         margin-bottom: 0;
     }
 
+}
+
+@media screen and (max-width: 400px) {
+    .main_banner {
+        width: 80%;
+        height: 28vh;
+        margin: 30px auto 0 auto;
+    }
+
+    .con {
+        height: 50vh;
+    }
 }

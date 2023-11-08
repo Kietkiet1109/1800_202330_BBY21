@@ -1,14 +1,17 @@
 .content {
     padding: 24px 16px 0 16px;
+    height: auto;
 }
 
 .picture_wrap {
+    margin-top: 40px;
+    margin-bottom: 40px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 2fr 0.3fr 0.3fr;
-    grid-gap: 3px;
-    margin: 10px 0 24px 0;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: 5fr, 2fr;
+    grid-gap: 20px;
+
 }
 
 .picture {
@@ -16,15 +19,64 @@
     overflow: hidden;
     background-color: #7FB069;
 }
-
-p {
+h1{
+    font-size: 50px;
+}
+p,h3 {
     display: inline-block;
+    font-size: 40px;
 }
 
-.name, .role{
+.name, .role {
     justify-self: center;
+    font-size: 30px;
 }
 
 .name {
     font-weight: 700;
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .content {
+        display: grid;
+        grid-template-rows: 1fr, 1fr, 2fr, 1fr, 2fr;
+    }
+
+    .picture {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        height: fit-content;
+        width: fit-content;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #7FB069;
+        display: grid;
+        grid-template-rows: 5fr 1fr;
+    }
+
+    #picture1, #picture2, #picture3 {
+        width: 500px;
+        height: 500px;
+        justify-self: center;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h3 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 35px;
+    }
+
+    .role {
+        font-size: 35px;
+    }
+
 }

@@ -8,32 +8,14 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles\about_us.css" />
+    <link rel="stylesheet" href="styles/style.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   </head>
+
   <body>
     <div class="wrap">
-      <header>
-        <div class="logo">
-          <a href="index.html">LOGO</a>
-        </div>
-        <div class="menu_wrap">
-          <div class="login">
-            <a href="login.html">Login</a>
-          </div>
-          <div class="menu">
-            <input type="checkbox" id="menu" />
-            <label for="menu"><i class="fa-solid fa-bars"></i></label>
-            <ul class="drop_down">
-              <li><a href="about_us.html">About us</a></li>
-              <li><a href="learn_more.html">Why is Recycling Important?</a></li>
-              <li><a href="learn_more.html">Local recycling instuctions</a></li>
-              <li><a href="leaderboard.html">Leaderboard</a></li>
-            </ul>
-          </div>
-        </div>
-      </header>
+      <header id="navbarPlaceholder"></header>
 
       <div class="content">
         <h1>About Us</h1>
@@ -45,34 +27,39 @@
             <img src="img/profile1.png" alt="Soomin" />
           </div>
           <div class="picture" id="picture2">
-            <img src="img/profile2.png" alt="Phuong" />
+            <img src="img/profile2.png" alt="Phuong style=" />
           </div>
           <div class="picture" id="picture3">
             <img src="img/profile3.png" alt="Kiet" />
           </div>
-          
-          <p class="name" id="name1">Soomin Jeong</p>
-          <p class="name"id="name2">Phuong Le (Yuri)</p>
-          <p class="name"id="name3">Kiet Ngo</p>
 
-          <p class="role" id="role1">Designer</p>
-          <p class="role" id="role2">Project Manager</p>
-          <p class="role" id="role3">Coder</p>
+          <div class="role" id="member1">
+            Soomin Jeong <br />
+            Designer
+          </div>
+          <div class="role" id="member2">
+            Phuong Le (Yuri) <br />
+            Project Manager
+          </div>
+          <div class="role" id="member3">
+            Kiet Ngo <br />
+            Coder
+          </div>
         </div>
-        
+
         <h3>Our story</h3>
         <br />
         <p>
-          Our team, BBY 21 decided to develop a game to help and educate users on how
-          to properly recycle, and figure out which recycling bin an item
+          Our team, BBY 21 decided to develop a game to help and educate users
+          on how to properly recycle, and figure out which recycling bin an item
           belongs to. This can help reduce the environmental impact caused by
           improper waste composition by providing the user with proper recycling
           instructions.
         </p>
         <br /><br />
         <p>
-          We hope you enjoy our app, and learn something new about to recyling and
-          categorizing trash.
+          We hope you enjoy our app, and learn something new about to recyling
+          and categorizing trash.
         </p>
       </div>
 
@@ -99,5 +86,8 @@
         </ul>
       </footer>
     </div>
+
+    <script src="scripts/skeleton.js"></script>
+
   </body>
 </html>
