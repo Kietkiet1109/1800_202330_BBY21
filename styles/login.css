@@ -97,6 +97,9 @@ legend {
     height: 50%;
     margin-top: 10px;
     margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 label b {
