@@ -1,17 +1,15 @@
 .con_wrap {
     width: 90%;
-    height: 60%;
-    margin: 0 auto;
+    height: calc(100vh - 100px - 5vh);
+    margin: 2.5vh auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
 }
 
 .main_banner {
     width: 50%;
-    height: 100%;
-    margin-top: 15vh;
+    height: 80%;
 }
 
 .login_wrap {
@@ -95,8 +93,9 @@ legend {
 .login_signup label {
     width: 100%;
     height: 50%;
-    margin-top: 10px;
+    margin-top: 1vh;
     margin-left: 0;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,12 +124,31 @@ b{
     margin-left: 8px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .main_banner {
         display: none;
     }
 
     .login_wrap {
         width: 100%;
+    }
+
+    .login_img_wrap {
+        margin: 20px auto;
+    }
+
+    .input_wrap {
+        width: 50%;
+    }
+
+    .login_signup label {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .input_wrap {
+        width: 80%;
     }
 }

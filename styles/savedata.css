@@ -1,47 +1,49 @@
-  /* I want to make it to become 2 columns but I can't*/
-@media screen and (max-width: 700px) {
-    .container {
-        width: 80%;
-    }
-}
-
-.body {
-    margin: 0;
-    padding: 0;
-}
-
+/* I want to make it to become 2 columns but I can't*/
 .title {
-    font-size: 50px;
-    font-weight: 600;
-    text-align: center;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin: 2vh auto;
 }
 
 /* Add CSS styles for the card container with vertical scrolling */
 .card-container {
-    max-height: 450px; /* Adjust the maximum height as needed */
-    width: 100vw;
-    overflow-y: auto;
-  }
+  height: calc(100vh - 140px - 4vh);
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
 
+/* Style the individual cards as needed */
+.card {
+  width: 100%;
+  /* Adjust the width as per your design, leaving a little space for margins */
+  /* Add margin between cards */
+  margin: 0 0 2vh 0;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  background-color: #7FB069;
+  overflow: hidden;
+}
 
-  /* Style the individual cards as needed */
-  .card {
-    width: 45vw; /* Adjust the width as per your design, leaving a little space for margins */
-    margin: 2%; /* Add margin between cards */
-    border: 5px solid #000000;
-    border-radius: 10px;
-    background-color: #7FB069;
-  }
+.gameID {
+  background-color: #134611;
+  border-bottom: 3px solid #000000;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
 
-  .gameID {
-    font-size: 30px;
-    text-align: center;
-    border-bottom: 5px solid #000000;
-    background-color: #134611;
-    color: #fff;
-  }
+.card-info {
+  font-size: 20px;
+  margin: 10px;
+}
 
-  .card-info {
+@media screen and (max-width: 400px) {
+  .title {
     font-size: 25px;
-    margin: 10px;
   }
+}
