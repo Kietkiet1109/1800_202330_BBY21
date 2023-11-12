@@ -1,11 +1,15 @@
 .content {
+    margin: 5%;
     width: 100%;
-    height:calc(100vh - 100px);
-    padding: 2vw;
+    height:calc(100vh - 130px);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+
 
 #description {
     font-size: 20px;
+    margin-bottom: 5%;
 }
 
 #about {
@@ -22,15 +26,16 @@
 }
 
 .picture_wrap {
-    width: 100%;
+    /* width: 100%; */
     height: 35vh;
-    margin: 3vh auto;
+    margin: 3vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1vw;
 }
 
 .picture {
+    height: 200px;
     justify-self: center;
     background-color: #7FB069;
     border-radius: 50%;
@@ -41,36 +46,51 @@
     justify-self:center;
     font-weight: 600;
     font-size: 20px;
-    text-align: center;
 }
 
-@media screen and (max-width: 500px) {
-    .content {
-        padding: 5vw;
-    }
+/*Don't change my code without notify me*/
 
-    #description {
-        font-size: 15px;
-    }
-    
-    #about {
-        font-size: 25px;
-        font-weight: 900;
-    }
-    
-    #who {
-        font-size: 20px;
-    }
-    
-    #story {
-        font-size: 20px;
-    }
-
-    .role {
-        font-size: 16px;
+@media screen and (max-width: 700px) {
+    .content{
+        overflow-y: scroll;
     }
 
     .picture_wrap {
-        height: auto;
+        width: 100%;
+        height: 50vh;
+        margin: 3vh auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 3fr 0.2fr 3fr 0.2fr 3fr 0.2fr;
+        gap: 2vw;
+        
     }
-}
+
+    .picture{
+        height: 100%;
+        width: auto;
+    }
+    #member1 {
+        grid-area: 1/2/2/3;
+    }
+    #Designer{
+        grid-area: 2/2/3/3;
+    }
+    #member2 {
+        grid-area: 3/2/4/3;
+    }
+    #PM{
+        grid-area: 4/2/5/3 ;
+    }
+    #member3 {
+        grid-area: 5/2/6/3;
+    }
+    #Coder{
+        grid-area: 6/2/7/3;
+    }
+
+    #Designer, #PM, #Coder {
+        height: fit-content; 
+    }
+} 
+

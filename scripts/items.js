@@ -1,91 +1,91 @@
 function TrashCollection (){
     database.collection("items").add({         
         bin: "paper",      
-        image: "./img/candy_wrapper.jpg",              
+        image: "./img/items/candy_wrapper.jpg",              
         level: 1,                      
         name: "Candy Wrapper"
     })
     
     database.collection("items").add({         
         bin: "compose",      
-        image: "./img/banana_peel.jpg",              
+        image: "./img/items/banana_peel.jpg",              
         level: 1,                      
         name: "Banana Peel"
     })
 
     database.collection("items").add({
         bin: "plastic",
-        image: "./img/bottle.jpg",
+        image: "./img/items/bottle.jpg",
         level: 1,
         name: "Bottle"
     })
 
     database.collection("items").add({
         bin: "compose",
-        image: "./img/apple_core.jpg",
+        image: "./img/items/apple_core.jpg",
         level: 1,
         name: "Apple Core"
     })
     
     database.collection("items").add({
         bin: "plastic",
-        image: "./img/coffee_cup",
+        image: "./img/items/coffee_cup.jpg",
         level: 1,
         name: "Coffee Cup"
     })
 
     database.collection("items").add({
         bin: "paper",
-        image: ".img/cardboard_box",
+        image: ".img/items/cardboard_box.jpg",
         level: 1,
         name: "Cardboard Box"
     })
 
     database.collection("items").add({         
         bin: "plastic",      
-        image: "./img/toothbrush.jpg",              
+        image: "./img/items/toothbrush.jpg",              
         level: 3,                      
         name: "Toothbrush"
     })
 
     database.collection("items").add({         
         bin: "plastic",      
-        image: "./img/plastic_bag.jpg",              
+        image: "./img/items/plastic_bag.jpg",              
         level: 1,                      
         name: "Plastic Bag"
     })
 
     database.collection("items").add({         
         bin: "compose",      
-        image: "./img/eggshells.jpg",              
+        image: "./img/items/eggshells.jpg",              
         level: 1,                      
         name: "Eggshells"
     })
 
     database.collection("items").add({         
         bin: "paper",      
-        image: "./img/magazines.jpg",              
+        image: "./img/items/magazines.jpg",              
         level: 2,                      
         name: "Magazines"
     })
 
     database.collection("items").add({         
         bin: "paper",      
-        image: "./img/envelope.jpg",              
+        image: "./img/items/envelope.jpg",              
         level: 2,                      
         name: "Envelope"
     })
 
     database.collection("items").add({         
         bin: "plastic",      
-        image: "./img/disposable_cutlery.jpg",              
+        image: "./img/items/disposable_cutlery.jpg",              
         level: 3,                      
         name: "Disposable Cutlery"
     })
 
     database.collection("items").add({         
         bin: "compose",      
-        image: "./img/leaves.jpg",              
+        image: "./img/items/leaves.jpg",              
         level: 1,                      
         name: "Leaves"
     })
@@ -93,21 +93,15 @@ function TrashCollection (){
 
     database.collection("items").add({         
         bin: "plastic",      
-        image: "./img/mik_box.jpg",              
+        image: "./img/items/mik_box.jpg",              
         level: 2,                      
         name: "Milk Box"
     })
 
-    database.collection("items").add({         
-        bin: "plastic",      
-        image: "./img/yogurt_container.jpg",              
-        level: 2,                      
-        name: "Yogurt Container"
-    })
 
     database.collection("items").add({         
         bin: "compose",      
-        image: "./img/tea_bags.jpg",              
+        image: "./img/items/tea_bags.jpg",              
         level: 1,                      
         name: "Tea Bags"
     })
@@ -115,7 +109,7 @@ function TrashCollection (){
 
     database.collection("items").add({         
         bin: "plastic",      
-        image: "./img/shampoo_bottle.jpg",              
+        image: "./img/items/shampoo_bottle.jpg",              
         level: 1,                      
         name: "Shampoo Bottle"
     })
@@ -123,56 +117,42 @@ function TrashCollection (){
     
     database.collection("items").add({         
         bin: "paper",      
-        image: "./img/toilet_paper_roll.jpg",              
+        image: "./img/items/toilet_paper_roll.jpg",              
         level: 2,                      
         name: "Toilet Paper Roll"
     })
     
     database.collection("items").add({
         bin: "paper",
-        image: "./img/straw.jpg",
+        image: "./img/items/straw.jpg",
         level: 1,
         name: "Straw"
     })
 
     database.collection("items").add({         
         bin: "paper",      
-        image: "./img/receipt.jpg",              
+        image: "./img/items/receipt.jpg",              
         level: 2,                      
         name: "Receipt"
     })
     
     database.collection("items").add({         
         bin: "plastic",      
-        image: "./img/usb_cable.jpg",              
+        image: "./img/items/usb_cable.jpg",              
         level: 3,                      
         name: "USB Cable"
-    })
-
-    database.collection("items").add({         
-        bin: "paper",      
-        image: "./img/tissue_paper.jpg",              
-        level: 1,                      
-        name: "Tissue Paper"
     })
     
     database.collection("items").add({         
         bin: "plastic",      
-        image: "./img/headphones.jpg",              
+        image: "./img/items/headphones.jpg",              
         level: 3,                      
         name: "Headphones"
     })
     
     database.collection("items").add({         
         bin: "paper",      
-        image: "./img/gift_wrap.jpg",              
-        level: 1,                      
-        name: "Gift Wrap"
-    })
-    
-    database.collection("items").add({         
-        bin: "paper",      
-        image: "./img/cereal_box.jpg",              
+        image: "./img/items/cereal_box.jpg",              
         level: 1,                      
         name: "Cereal Box"
     })
@@ -180,7 +160,7 @@ function TrashCollection (){
 
     database.collection("items").add({         
         bin: "plastic",      
-        image: "./img/disposable_lighter.jpg",              
+        image: "./img/items/disposable_lighter.jpg",              
         level: 3,                      
         name: "Disposable Lighter"
     })
