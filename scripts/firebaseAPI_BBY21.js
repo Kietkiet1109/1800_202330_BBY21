@@ -16,4 +16,3 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const database = firebase.firestore();
 
-// don't delete this js - I try to figure this out
