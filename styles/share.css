@@ -1,6 +1,6 @@
 .desc {
     width: 80%;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .fa-square-facebook {
@@ -19,6 +19,11 @@
     color: rgb(83, 83, 83);
 }
 
+.fa-brands, .fa-solid{
+    padding: 12px;
+    font-size: 24px;
+
+}
 @media screen and (max-width: 700px) {
     .desc {
         height: 30%;
