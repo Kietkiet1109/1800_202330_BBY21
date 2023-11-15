@@ -1,8 +1,3 @@
-// initialize the Firebase app
-// initialize Firestore database
-const app = firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
 // Have added temporarily information on Firestore for testing
 function populateSavedatas() {
     let savedataCardTemplate = document.getElementById("savedataCardTemplate");
