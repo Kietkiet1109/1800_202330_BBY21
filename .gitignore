@@ -2,5 +2,4 @@
 *.logs
 node_modules/
 .vscode/
-firebase.js
 firebaseAPI_BBY21.js
