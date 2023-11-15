@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBY21</title>
+
+    <link href="img/favicon.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    
+</head>
+<body>
+
+    <div class="wrap">
+        <header id="navbarPlaceholder"></header>
+
+        <div class="con_wrap">
+            <ul class="game_nav">
+                <li>
+                    <a href="index.html"><i class="fa-solid fa-reply"></i>Exit Game</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-stopwatch"></i>00:00 
+                </li>
+            </ul>
+            <div class="item_wrap">
+                <h1>Level <span id="level"></span></h1>
+                <h1>Which garbage bin does <i id="name"></i> belong to?</h1>
+                <div class="item_img">
+                    <img id="image" src="" alt="Item Image">
+                </div>
+            </div>
+            <ul class="bins_wrap">
+                <li class="bin_wrap" data-bin="plastic">
+                    <div class="bin_img">
+                        <img src="img/blue_bin.png" alt="plastic">
+                    </div>
+                    <h3>Plastic</h3>
+                </li>
+                <li class="bin_wrap" data-bin="compose">
+                    <div class="bin_img">
+                        <img src="img/green_bin.png" alt="organic waste">
+                    </div>
+                    <h3>Organic Waste</h3>
+                </li>
+                <li class="bin_wrap" data-bin="paper">
+                    <div class="bin_img">
+                        <img src="img/yellow_bin.png" alt="paper">
+                    </div>
+                    <h3>Paper</h3>
+                </li>
+                <li class="bin_wrap" data-bin="glass">
+                    <div class="bin_img">
+                        <img src="img/grey_bin.png" alt="glass">
+                    </div>
+                    <h3>Glass</h3>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="pop_up" id="correctpopup">
+            <div class="result">
+                <div class="result_icon">
+                    <i class="fa-regular fa-circle-check right"></i>
+                </div>
+                <p class="result_text">Correct!</p>
+                <p class="result_desc">
+                    <i>This item</i> belongs in the <i id="correctbin"></i> bin because ...
+                    <a href="https://burnaby.widen.net/s/qvjdb22wph/residential-recycling-collection-guide" target="_blank">
+                        Want to learn more why?
+                    </a>
+                </p>
+                <ul class="btn_wrap">
+                    <li class="home_btn">
+                        <a href="index.html">Go Home</a>
+                    </li>
+                    <li class="next_stage" id="correct_next_stage_button">Next stage</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pop_up" id="wrongpopup">
+            <div class="result">
+                <div class="result_icon">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <p class="result_text">Wrong!</p>
+                <p class="result_desc">
+                    <i>This item</i> belongs in the <i id="wrongbin"></i> bin because ...
+                    <a href="https://burnaby.widen.net/s/qvjdb22wph/residential-recycling-collection-guide" target="_blank">
+                        Want to learn more why?
+                    </a>
+                </p>
+                <ul class="btn_wrap">
+                    <li class="home_btn">
+                        <a href="index.html">Go Home</a>
+                    </li>
+                    <li class="next_stage" id="wrong_next_stage_button">Next stage</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer id="footerPlaceholder"></footer>
+    </div>
+    
+    <script src="scripts/firebaseAPI_BBY21.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/skeleton.js"></script>
+    
+</body>
+</html>
