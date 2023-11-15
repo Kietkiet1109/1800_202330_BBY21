@@ -34,31 +34,32 @@
                 </li>
             </ul>
             <div class="item_wrap">
-                <h1>Which garbage bin does <i>this item</i> belong to?</h1>
+                <h1>Level <span id="level"></span></h1>
+                <h1>Which garbage bin does <i id="name"></i> belong to?</h1>
                 <div class="item_img">
-                    <img src="img/favicon.png" alt="item">
+                    <img id="image" src="" alt="Item Image">
                 </div>
             </div>
             <ul class="bins_wrap">
-                <li class="bin_wrap">
+                <li class="bin_wrap" data-bin="plastic">
                     <div class="bin_img">
                         <img src="img/blue_bin.png" alt="plastic">
                     </div>
                     <h3>Plastic</h3>
                 </li>
-                <li class="bin_wrap">
+                <li class="bin_wrap" data-bin="compose">
                     <div class="bin_img">
                         <img src="img/green_bin.png" alt="organic waste">
                     </div>
                     <h3>Organic Waste</h3>
                 </li>
-                <li class="bin_wrap">
+                <li class="bin_wrap" data-bin="paper">
                     <div class="bin_img">
                         <img src="img/yellow_bin.png" alt="paper">
                     </div>
                     <h3>Paper</h3>
                 </li>
-                <li class="bin_wrap">
+                <li class="bin_wrap" data-bin="glass">
                     <div class="bin_img">
                         <img src="img/grey_bin.png" alt="glass">
                     </div>
@@ -67,15 +68,14 @@
             </ul>
         </div>
         
-        <div class="pop_up">
+        <div class="pop_up" id="correctpopup">
             <div class="result">
                 <div class="result_icon">
                     <i class="fa-regular fa-circle-check right"></i>
-                    <i class="fa-regular fa-circle-xmark wrong"></i>
                 </div>
                 <p class="result_text">Correct!</p>
                 <p class="result_desc">
-                    <i>This item</i> belongs in the <i>plastic</i> bin because ...
+                    <i>This item</i> belongs in the <i id="correctbin"></i> bin because ...
                     <a href="https://burnaby.widen.net/s/qvjdb22wph/residential-recycling-collection-guide" target="_blank">
                         Want to learn more why?
                     </a>
@@ -84,7 +84,28 @@
                     <li class="home_btn">
                         <a href="index.html">Go Home</a>
                     </li>
-                    <li class="next_stage">Next stage</li>
+                    <li class="next_stage" id="correct_next_stage_button">Next stage</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pop_up" id="wrongpopup">
+            <div class="result">
+                <div class="result_icon">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <p class="result_text">Wrong!</p>
+                <p class="result_desc">
+                    <i>This item</i> belongs in the <i id="wrongbin"></i> bin because ...
+                    <a href="https://burnaby.widen.net/s/qvjdb22wph/residential-recycling-collection-guide" target="_blank">
+                        Want to learn more why?
+                    </a>
+                </p>
+                <ul class="btn_wrap">
+                    <li class="home_btn">
+                        <a href="index.html">Go Home</a>
+                    </li>
+                    <li class="next_stage" id="wrong_next_stage_button">Next stage</li>
                 </ul>
             </div>
         </div>
