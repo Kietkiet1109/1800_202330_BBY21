@@ -1,10 +1,83 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyCWOFwi5f6URL--OZDIH7LjzkGxHf7TBFc",
+    authDomain: "bby21-e4ba0.firebaseapp.com",
+    databaseURL: "https://bby21-e4ba0-default-rtdb.firebaseio.com",
+    projectId: "bby21-e4ba0",
+    storageBucket: "bby21-e4ba0.appspot.com",
+    messagingSenderId: "595718662721",
+    appId: "1:595718662721:web:d387bd81e20c0757fdf4c0"
+};
+
+// initialize the Firebase app
+// initialize Firestore database
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+var itemsArray = []; // Array to store the items from Firestore
+let index = 0;
+
+function getItems() {
+    db.collection("items").get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                itemsArray.push(doc.data()); // Add the item data to the array
+            });
+            sortItemsByLevel();
+            console.log(itemsArray); // Log the array to see the items
+            displayItem(index);
+        })
+}
+getItems(); // Call the function to retrieve items and store them in the array
+
+function displayItem(index) {
+    // Update HTML with the first item's data
+    document.getElementById("name").innerHTML = itemsArray[index].name;
+    document.getElementById("level").innerHTML = itemsArray[index].level;
+    document.getElementById("correctbin").innerHTML = itemsArray[index].bin; // For Correct pop-up
+    document.getElementById("wrongbin").innerHTML = itemsArray[index].bin; // For Wrong pop-up
+    document.getElementById("image").src = itemsArray[index].image;
+}
+
+// Sort items by 'level' in ascending order
+function sortItemsByLevel() {
+    itemsArray.sort(function(a, b) {
+        return a.level - b.level;
+    });
+}
+
+// Function to check the user's bin selection
+function checkBinSelection(userSelectedBin) {
+    const correctBin = itemsArray[index].bin;
+    if (userSelectedBin === correctBin) {
+        // Correct bin selected
+        $("#correctpopup").fadeIn(); // Show correct pop-up
+    } else {
+        // Wrong bin selected
+        $("#wrongpopup").fadeIn(); // Show wrong pop-up
+    }
+}
+
 $(document).ready(function(){
-    // pop up event
+    // Pop up event
     $(".bin_wrap").click(function(){
-        $(".pop_up").fadeIn();
+        var userSelectedBin = $(this).data("bin");
+        checkBinSelection(userSelectedBin);
     })
 
     $(".next_stage").click(function(){
         $(".pop_up").fadeOut();
     })
+});
+
+// Event listener for the Next Stage button at Correct pop-up
+document.getElementById("correct_next_stage_button").addEventListener('click', function() {
+    displayItem(index + 1);
+    index = index + 1;
+});
+
+// Event listener for the Next Stage button at Wrong pop-up
+document.getElementById("wrong_next_stage_button").addEventListener('click', function() {
+    displayItem(index + 1);
+    index = index + 1;
 });
