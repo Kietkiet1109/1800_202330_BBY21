@@ -12,6 +12,11 @@
     align-items: center;
 }
 
+i:hover{
+    background-color: #2e8b57;
+    cursor: pointer;
+}
+
 .game_nav li {
     padding: 5px 15px;
     background-color: #2e8b57;
