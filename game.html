@@ -47,7 +47,7 @@
             </ul>
             <div class="item_wrap">
                 <h1>Level <span id="level"></span></h1>
-                <h1>Which garbage bin does <i id="name"></i> belong to?</h1>
+                <h1>Which garbage bin does <b id="name"></b> belong to?</h1>
                 <div class="item_img">
                     <img id="image" src="" alt="Item Image">
                 </div>
@@ -87,16 +87,16 @@
                 </div>
                 <p class="result_text">Correct!</p>
                 <p class="result_desc">
-                    <i>This item</i> belongs in the <i id="correctbin"></i> bin because ...
+                    <b id="right_name"></b> belongs in the <b id="correctbin"></b> bin because ...
                     <a href="https://burnaby.widen.net/s/qvjdb22wph/residential-recycling-collection-guide" target="_blank">
                         Want to learn more why?
                     </a>
                 </p>
                 <ul class="btn_wrap">
                     <li class="home_btn">
-                        <a href="index.html">Go Home</a>
+                        <a href="index.html"><i class="fa-solid fa-house"></i> Go Home</a>
                     </li>
-                    <li class="next_stage" id="correct_next_stage_button">Next stage</li>
+                    <li class="next_stage" id="correct_next_stage_button">Next stage <i class="fa-solid fa-angles-right"></i></li>
                 </ul>
             </div>
         </div>
@@ -104,20 +104,20 @@
         <div class="pop_up" id="wrongpopup">
             <div class="result">
                 <div class="result_icon">
-                    <i class="fa-regular fa-circle-xmark"></i>
+                    <i class="fa-regular fa-circle-xmark wrong"></i>
                 </div>
                 <p class="result_text">Wrong!</p>
                 <p class="result_desc">
-                    <i>This item</i> belongs in the <i id="wrongbin"></i> bin because ...
+                    <b id="wrong_name"></b> belongs in the <b id="wrongbin"></b> bin because ...
                     <a href="https://burnaby.widen.net/s/qvjdb22wph/residential-recycling-collection-guide" target="_blank">
                         Want to learn more why?
                     </a>
                 </p>
                 <ul class="btn_wrap">
                     <li class="home_btn">
-                        <a href="index.html">Go Home</a>
+                        <a href="index.html"><i class="fa-solid fa-house"></i> Go Home</a>
                     </li>
-                    <li class="next_stage" id="wrong_next_stage_button">Next stage</li>
+                    <li class="next_stage" id="wrong_next_stage_button">Next stage <i class="fa-solid fa-angles-right"></i></li>
                 </ul>
             </div>
         </div>

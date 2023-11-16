@@ -1,29 +1,28 @@
 .desc {
     width: 80%;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .fa-square-facebook {
-    color: #00008b;
+    color: #4267B2;
 }
 
 .fa-twitter {
-    color: #1e90ff;
+    color: #1DA1F2;
 }
 
-.fa-instagram {
-    color: #800080;
+.fa-reddit {
+    color: #FF5700;
 }
 
 .fa-link {
     color: rgb(83, 83, 83);
 }
 
-.fa-brands, .fa-solid{
-    padding: 12px;
+.con .fa-brands, .con .fa-solid{
     font-size: 24px;
-
 }
+
 @media screen and (max-width: 700px) {
     .desc {
         height: 30%;

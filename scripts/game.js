@@ -17,6 +17,8 @@ getItems(); // Call the function to retrieve items and store them in the array
 function displayItem(index) {
     // Update HTML with the first item's data
     document.getElementById("name").innerHTML = itemsArray[index].name;
+    document.getElementById("right_name").innerHTML = itemsArray[index].name;
+    document.getElementById("wrong_name").innerHTML = itemsArray[index].name;
     document.getElementById("level").innerHTML = itemsArray[index].level;
     document.getElementById("correctbin").innerHTML = itemsArray[index].bin; // For Correct pop-up
     document.getElementById("wrongbin").innerHTML = itemsArray[index].bin; // For Wrong pop-up
