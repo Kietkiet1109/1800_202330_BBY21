@@ -107,13 +107,13 @@
 
 .pop_up {
     width: 500px;
-    height: 70vh;
+    height: 80vh;
     background-color: #fff;
     border-radius: 30px;
     border: 1px solid #041B15;
     align-items: center;
     position: absolute;
-    top: 20%;
+    top: 11.5%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 90;
@@ -126,7 +126,7 @@
     padding: 5vh 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -175,10 +175,88 @@
     background-color: #dc143c;
 }
 
-.next_stage {
+.next_stage, .result_btn     {
     background-color: #7FB069;
     cursor: pointer;
 }
+
+/* fun facts css starts here */
+
+.fun_facts {
+    width: 85%;
+    border-radius: 30px;
+    border: 1px solid #041B15;
+    padding: 2vh;
+    background-color: #7FB069;
+}
+
+.fun_facts h1 {
+    font-size: 23px;
+}
+
+.fun_facts p {
+    font-size: 19px;
+}
+
+/* fun facts css ends here */
+
+/* result pop-up css starts here */
+
+#resultpopup {
+    display: block;
+}
+
+.result_wrap {
+    flex-wrap: wrap;
+}
+
+.fa-crown {
+    font-size: 40px;
+    color: #ffd700;
+}
+
+.result_desc {
+    padding: 0 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#score, #time {
+    display: contents;
+}
+
+.result_desc p {
+    margin-top: 10px;
+}
+
+#place {
+    /* font-size: 20px; */
+    font-weight: 800;
+}
+
+.result_learnmore {
+    font-size: 20px;
+    padding: 0 3vw;
+    text-align: center;
+}
+
+.result_learnmore_link {
+    display: contents;
+}
+
+.result_learnmore a {
+    color: #2e8b57;
+    text-decoration: underline;
+}
+
+.result_wrap li {
+    width: 45%;
+    margin-top: 2vh;
+}
+
+/* result pop-up css ends here */
 
 @media screen and (max-width: 800px) {
 
@@ -213,6 +291,39 @@
 
     .bin_wrap h3 {
         height: 20%;
+    }
+
+    .fun_facts h1 {
+        font-size: 20px;
+    }
+    
+    .fun_facts p {
+        font-size: 16px;
+    }    
+
+    .btn_wrap {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .btn_wrap li {
+        width: auto;
+        padding: 8px 15px;
+        font-size: 15px;
+    }
+
+    .result_wrap {
+        flex-wrap: wrap;
+    }
+
+    .result_desc p, .result_learnmore {
+        font-size: 16px;
+    }
+    
+    .result_wrap li {
+        width: 45%;
+        padding: 8px 0;
+        margin-top: 2vh;
     }
 
     .audio {
