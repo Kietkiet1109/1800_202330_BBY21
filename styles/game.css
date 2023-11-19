@@ -202,10 +202,6 @@
 
 /* result pop-up css starts here */
 
-#resultpopup {
-    display: block;
-}
-
 .result_wrap {
     flex-wrap: wrap;
 }
@@ -215,7 +211,7 @@
     color: #ffd700;
 }
 
-.result_desc {
+.result_desc_wrap {
     padding: 0 3vw;
     display: flex;
     flex-direction: column;
@@ -227,7 +223,7 @@
     display: contents;
 }
 
-.result_desc p {
+.result_desc_wrap p {
     margin-top: 10px;
 }
 
