@@ -12,11 +12,17 @@
     align-items: center;
 }
 
+.audio_wrap {
+    position: absolute;
+    right: 2vh;
+    bottom: 2vh;
+}
+
 .audio{
+    font-size: 30px;
     color:#2e8b57;
     cursor: pointer;
 }
-
 
 .game_nav li {
     padding: 5px 15px;
@@ -207,6 +213,10 @@
 
     .bin_wrap h3 {
         height: 20%;
+    }
+
+    .audio {
+        font-size: 25px;
     }
 
     .pop_up {
