@@ -17,7 +17,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    
+    <script src="scripts/funfact.js"></script>
 </head>
 <body>
 
@@ -29,8 +29,8 @@
                 <li>
                     <a href="index.html"><i class="fa-solid fa-reply"></i>Exit Game</a>
                 </li>
-                <li>
-                    <i class="fa-solid fa-stopwatch"></i>00:00 
+                <li id="timeup">
+                    <i class="fa-solid fa-stopwatch" id="timer"></i>
                 </li>
             </ul>
             <div class="item_wrap">
@@ -177,7 +177,8 @@
     <script src="scripts/game.js"></script>
     <script src="scripts/skeleton.js"></script>
     <script src="scripts/sound.js"></script>
+    <!-- <script src="scripts/funfact.js"></script> -->
+    <script src="scripts/timer.js"></script>
     
-
 </body>
 </html>
