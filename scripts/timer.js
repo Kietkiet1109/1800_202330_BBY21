@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let time = 0;
         const timer = setInterval(function(){
             const min = String(Math.trunc(time/60)).padStart(2,0);
-            const sec = String( time % 60).padStart(2,0);
-            labelTimer.textContent = `${ min }: ${ sec }`;
+            const sec = String(time % 60).padStart(2,0);
+            labelTimer.textContent = ` ${ min }: ${ sec }`;
             time ++;
         }, 1000);
     }

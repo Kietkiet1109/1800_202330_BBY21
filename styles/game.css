@@ -90,9 +90,11 @@
     justify-content: space-between;
     
 }
+
 .bin_wrap:hover{
     cursor: pointer;
 }
+
 #timeup:hover{
     cursor: pointer;
 }
