@@ -117,7 +117,5 @@ function funfact() {
 
 // funfact();
 document.addEventListener("DOMContentLoaded", function () {
-  // Đoạn mã của bạn ở đây, bao gồm cả gọi hàm funfact
-  // funfact();
 });
 

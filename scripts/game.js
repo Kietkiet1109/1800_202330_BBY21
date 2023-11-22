@@ -1,6 +1,18 @@
 var itemsArray = []; // Array to store the items from Firestore
 let index = 0;
 
+// Play the tick sound for correct choice.
+function playCorrectSound() {
+    var audio = new Audio('audio/correct_sound.mp3');
+    audio.play();
+}
+
+// Play the errr sound for wrong choice.
+function playIncorrectSound() {
+    var audio = new Audio('audio/incorrect_sound.mp3');
+    audio.play();
+}
+
 function getItems() {
     db.collection("items").get()
         .then((querySnapshot) => {
@@ -38,9 +50,11 @@ function checkBinSelection(userSelectedBin) {
     if (userSelectedBin === correctBin) {
         // Correct bin selected
         $("#correctpopup").fadeIn(); // Show correct pop-up
+        playCorrectSound();
     } else {
         // Wrong bin selected
         $("#wrongpopup").fadeIn(); // Show wrong pop-up
+        playIncorrectSound();
     }
 }
 
