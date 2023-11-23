@@ -1,8 +1,4 @@
- function sayHello() {
-    
-}
+function sayHello() {}
 //sayHello();
 
-function TrashCollection() {
-    
-}
+function TrashCollection() {}

@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BBY21 savedata</title>
 
-    <link href="img/favicon.png" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/savedata.css">
-    <link rel="stylesheet" href="styles/footer.css">
+    <link href="img/favicon.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/savedata.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="wrap">
-        <header id="navbarPlaceholder"></header>
-        
-        <div class="container">
-            <h2 class="title">GAME SAVEDATAS</h2>
-            <div class="card-container">
-                <div id="savedataCardGroup" class="row row-cols-auto" style="width: 300px">
-                
-                </div>
-            </div>
-        </div>
-    
-        <template id="savedataCardTemplate">
-            <div class="card bg-secondary">
-                <div class="card-body bg-light">
-                    <h5 class="gameID"># placeholder</h5>
-                    <div class="card-info">
-                        <p class="time">Time: placeholder</p>
-                        <p><span class="score">Score: placeholder</span> / <span class="max">placeholder</span></p>
-                        <p class="date">Date: placeholder</p>
-                    </div>
-                </div>
-            </div>
-        </template>
+      <header id="navbarPlaceholder"></header>
 
-        <footer id="footerPlaceholder"></footer>
+      <div class="container">
+        <h2 class="title">GAME SAVEDATAS</h2>
+        <div class="card-container">
+          <div
+            id="savedataCardGroup"
+            class="row row-cols-auto"
+            style="width: 300px"
+          ></div>
+        </div>
+      </div>
+
+      <template id="savedataCardTemplate">
+        <div class="card bg-secondary">
+          <div class="card-body bg-light">
+            <h5 class="gameID"># placeholder</h5>
+            <div class="card-info">
+              <p class="time">Time: placeholder</p>
+              <p>
+                <span class="score">Score: placeholder</span> /
+                <span class="max">placeholder</span>
+              </p>
+              <p class="date">Date: placeholder</p>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <footer id="footerPlaceholder"></footer>
     </div>
 
     <script src="scripts/firebaseAPI_BBY21.js"></script>
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/savedata.js"></script>
-
-</body>
+  </body>
 </html>

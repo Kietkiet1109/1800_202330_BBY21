@@ -1,6 +1,6 @@
 .content {
     width: 100%;
-    height:calc(100vh - 100px);
+    height: calc(100vh - 100px);
     padding: 2vw;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .role {
-    justify-self:center;
+    justify-self: center;
     font-weight: 600;
     font-size: 20px;
     text-align: center;
@@ -52,16 +52,16 @@
     #description {
         font-size: 15px;
     }
-    
+
     #about {
         font-size: 25px;
         font-weight: 900;
     }
-    
+
     #who {
         font-size: 18px;
     }
-    
+
     #story {
         font-size: 18px;
     }

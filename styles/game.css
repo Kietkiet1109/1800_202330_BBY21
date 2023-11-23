@@ -18,9 +18,9 @@
     bottom: 2vh;
 }
 
-.audio{
+.audio {
     font-size: 30px;
-    color:#2e8b57;
+    color: #2e8b57;
     cursor: pointer;
 }
 
@@ -88,14 +88,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
-.bin_wrap:hover{
+.bin_wrap:hover {
     cursor: pointer;
 }
 
-#timeup:hover{
+#timeup:hover {
     cursor: pointer;
 }
 
@@ -199,7 +199,7 @@
     background-color: #dc143c;
 }
 
-.next_stage, .result_btn     {
+.next_stage, .result_btn {
     background-color: #7FB069;
     cursor: pointer;
 }
@@ -291,7 +291,7 @@
     .item_wrap h1:nth-child(2) {
         font-size: 20px;
     }
-    
+
     .bins_wrap {
         width: 90%;
         max-height: none;
@@ -316,10 +316,10 @@
     .fun_facts h1 {
         font-size: 20px;
     }
-    
+
     .fun_facts p {
         font-size: 16px;
-    }    
+    }
 
     .btn_wrap {
         width: 100%;
@@ -339,7 +339,7 @@
     .result_desc p, .result_learnmore {
         font-size: 16px;
     }
-    
+
     .result_wrap li {
         width: 45%;
         padding: 8px 0;
@@ -357,7 +357,7 @@
     .result_text {
         font-size: 25px;
     }
-    
+
     .result_desc {
         font-size: 18px;
         padding: 0 3vw;
