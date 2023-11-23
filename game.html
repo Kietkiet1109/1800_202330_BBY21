@@ -17,7 +17,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="scripts/funfact.js"></script>
 </head>
 <body>
 
@@ -78,6 +77,7 @@
         
         <div class="pop_up" id="correctpopup">
             <div class="result">
+                <p>Stage <span id="correctindex"></span> / 10</p>
                 <div class="result_icon">
                     <i class="fa-regular fa-circle-check right"></i>
                 </div>
@@ -106,6 +106,7 @@
 
         <div class="pop_up" id="wrongpopup">
             <div class="result">
+                <p>Stage <span id="wrongindex"></span> / 10</p>
                 <div class="result_icon">
                     <i class="fa-regular fa-circle-xmark wrong"></i>
                 </div>
@@ -132,12 +133,12 @@
             </div>
         </div>
 
-        <div class="pop_up" id="resultpopup">
+        <div class="result_pop_up" id="resultpopup">
             <div class="result">
                 <i class="fa-solid fa-crown"></i>
                 <div class="result_desc_wrap">
                     <h2>You scored</h2>
-                    <p><h3 id="score">nn / nn</h3> in <h3 id="time">nn : nn</h3> minutes!</p>
+                    <p><h3 id="score"></h3> / 10 in <h3 id="time"></h3></p>
                     <p class="highest_score">
                         <h3>your highest score is:</h3>
                         <p>
@@ -165,7 +166,11 @@
                             <i class="fa-solid fa-house"></i> Go Home
                         </a>
                     </li>
-                    <li class="replay result_btn">Replay <i class="fa-solid fa-rotate-right"></i></li>
+                    <li class="replay result_btn">
+                        <a href="game.html">
+                            Replay <i class="fa-solid fa-rotate-right"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -177,7 +182,7 @@
     <script src="scripts/game.js"></script>
     <script src="scripts/skeleton.js"></script>
     <script src="scripts/sound.js"></script>
-    <!-- <script src="scripts/funfact.js"></script> -->
+    <script src="scripts/funfact.js"></script>
     <script src="scripts/timer.js"></script>
     
 </body>
