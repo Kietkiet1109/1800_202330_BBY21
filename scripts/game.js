@@ -36,8 +36,8 @@ function getItems() {
       });
       sortItemsLevel(); // Sort by level in ascending order
       selectedItems = selectRandomItems(); // Select random items based on level
-      console.log(itemsArray); // Log all the items from Firestore
-      console.log(selectedItems); // Log 10 selected items for current game
+      // console.log(itemsArray); // Log all the items from Firestore
+      // console.log(selectedItems); // Log 10 selected items for current game
       displayItem(index);
     });
 }
@@ -117,10 +117,12 @@ function checkBinSelection(userSelectedBin) {
     // Correct bin selected
     score = score + 1;
     $("#correctpopup").fadeIn(); // Show correct pop-up
+    displayFunFact();
     playCorrectSound(); // correct sound plays
   } else {
     // Wrong bin selected
     $("#wrongpopup").fadeIn(); // Show wrong pop-up
+    displayFunFact();
     playIncorrectSound(); // wrong sound play
   }
 }
@@ -191,11 +193,10 @@ function getFunFacts() {
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         var factData = doc.data();
-        console.log("Fun Fact data:", factData); // Log fact data to see if 'fact' is present
+        // console.log("Fun Fact data:", factData); // Log fact data to see if 'fact' is present
         funFactsArray.push(factData.fact);
       });
-      console.log(funFactsArray); // Log the array to see the facts
-      displayFunFact();
+      // console.log(funFactsArray); // Log the array to see the facts
     });
 }
 getFunFacts(); // call the getFunFacts function
@@ -218,4 +219,4 @@ function displayFunFact() {
   funFactDivRight.innerHTML = randomFunFact;
   funFactDivWrong.innerHTML = randomFunFact;
 }
-displayFunFact(); // call the displayFunFact function
+// displayFunFact(); // call the displayFunFact function
