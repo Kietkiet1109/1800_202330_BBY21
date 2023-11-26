@@ -27,6 +27,7 @@ var itemsArray = []; // Array to store the items from Firestore
 var selectedItems = []; // Array to store 10 random items for each game
 let index = 0;
 let score = 0;
+const gameID = generateGameID();
 function getItems() {
   db.collection("items")
     .get()
@@ -146,9 +147,10 @@ document
     displayItem(index + 1);
     index = index + 1;
     if (index >= 10) {
-      document.getElementById("score").innerHTML = score;
-      $("#resultpopup").fadeIn();
       stopTimer();
+      document.getElementById("score").innerHTML = score;
+      addResults();
+      $("#resultpopup").fadeIn();
     }
   });
 
@@ -159,9 +161,10 @@ document
     displayItem(index + 1);
     index = index + 1;
     if (index >= 10) {
-      document.getElementById("score").innerHTML = score;
-      $("#resultpopup").fadeIn();
       stopTimer();
+      document.getElementById("score").innerHTML = score;
+      addResults();
+      $("#resultpopup").fadeIn();
     }
   });
 
@@ -174,7 +177,7 @@ function stopTimer() {
     // Take the time on the timer
     const timerDisplay = document.querySelector("#timer");
     if (timerDisplay) {
-      const currentTime = timerDisplay.textContent.trim();
+      currentTime = timerDisplay.textContent.trim();
       console.log("Current Time:", currentTime);
 
       // Show the time on the HTML page
@@ -220,3 +223,50 @@ function displayFunFact() {
   funFactDivWrong.innerHTML = randomFunFact;
 }
 // displayFunFact(); // call the displayFunFact function
+
+// Function to add the results to FireStore
+function addResults() {
+  const gameResult = {
+    GameID: gameID,
+    UserName: userName,
+    Time: currentTime,
+    Score: score,
+    Max: index,
+    Date: new Date() // captures the current date and time
+  };
+
+  db.collection("games").add(gameResult)
+    .then((docRef) => {
+        console.log("Game result has been recorded");
+  })
+}
+
+// Function to generate the gameID
+function generateGameID() {
+
+  // Generate a random gameID between 00000 and 99999 
+  const rannum = Math.floor(Math.random() * 100000);
+
+  // Convert the number to a string that has 5 characters
+  const gameID = String(rannum).padStart(5, '0');
+
+  return gameID;
+}
+
+// Function to get displayName
+function getdisplayName() {
+  // Check if the user is logged in:
+  firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+          currentUser = db.collection("users").doc(user.uid);
+          currentUser.get().then(userDoc => {
+              // Get the displayName
+              userName = userDoc.data().displayName;
+              console.log(userName);
+          })
+      } else {
+          console.log("No user is logged in."); // Log a message when no user is logged in
+      }
+  })
+}
+getdisplayName();

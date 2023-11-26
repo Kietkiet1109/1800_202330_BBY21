@@ -1,11 +1,29 @@
-// Have added temporarily information on Firestore for testing
-function populateSavedatas() {
+// Function to get displayName
+function getdisplayName(callback) {
+  // Check if the user is logged in:
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      currentUser = db.collection("users").doc(user.uid);
+      currentUser.get().then(userDoc => {
+        // Get the displayName
+        var userName = userDoc.data().displayName;
+        console.log(userName);
+        callback(userName); // Call the callback function with userName
+      })
+    } else {
+      console.log("No user is logged in."); // Log a message when no user is logged in
+    }
+  })
+}
+
+function populateSavedatas(userName) {
   let savedataCardTemplate = document.getElementById("savedataCardTemplate");
   let savedataCardGroup = document.getElementById("savedataCardGroup");
 
   let params = new URL(window.location.href);
-
+  
   db.collection("games")
+    .where("UserName", "==", userName) // Filter by current user's username
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -34,4 +52,7 @@ function populateSavedatas() {
     });
 }
 
-populateSavedatas();
+// Call getdisplayName and provide a callback function
+getdisplayName(function(userName) {
+  populateSavedatas(userName);
+});
