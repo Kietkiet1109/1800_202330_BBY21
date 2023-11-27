@@ -1,30 +1,31 @@
-// audio for correct choice
-function playCorrectSound() {
-  var audio = new Audio("audio/correct_sound.mp3");
-  audio.play();
-}
-
-// audio for wrong choice
-function playIncorrectSound() {
-  var audio = new Audio("audio/incorrect_sound.mp3");
-  audio.play();
-}
-
 // Play the tick sound for correct choice.
 function playCorrectSound() {
   var audio = new Audio("audio/correct_sound.mp3");
-  audio.play();
+  audio.volume = 0.2; // setting default audio value to 0.2
+  // If the audio is muted, the sound effect does not activate
+  var audioBtn = document.getElementById("audio_btn");
+  if(audioBtn.innerHTML == '<i class="fa-solid fa-volume-high audio" onclick="pauseAudio()" type="button"></i>'){
+    audio.play();
+  } else {
+    audio.pause();
+  }  
 }
 
-// Play the errr sound for wrong choice.
+// Play the error sound for wrong choice.
 function playIncorrectSound() {
   var audio = new Audio("audio/incorrect_sound.mp3");
-  audio.play();
-}
+  audio.volume = 0.2; // setting default audio value to 0.2
+  // If the audio is muted, the sound effect does not activate
+  var audioBtn = document.getElementById("audio_btn");
+  if(audioBtn.innerHTML == '<i class="fa-solid fa-volume-high audio" onclick="pauseAudio()" type="button"></i>'){
+    audio.play();
+  } else {
+    audio.pause();
+  }  }
 
 var funFactsArray = []; // Array to store the fun facts from Firestore
 var itemsArray = []; // Array to store the items from Firestore
-var selectedItems = []; // Array to store 10 random items for each game
+var selectedItems = []; // Array to store 20 random items for each game
 let index = 0;
 let score = 0;
 const gameID = generateGameID();
@@ -38,7 +39,7 @@ function getItems() {
       sortItemsLevel(); // Sort by level in ascending order
       selectedItems = selectRandomItems(); // Select random items based on level
       // console.log(itemsArray); // Log all the items from Firestore
-      // console.log(selectedItems); // Log 10 selected items for current game
+      // console.log(selectedItems); // Log 20 selected items for current game
       displayItem(index);
     });
 }
@@ -63,7 +64,7 @@ function selectRandomItems() {
   let level3Min = 1;
 
   // Randomly distribute 7 items across the 3 levels
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 15; i++) {
     let ran = Math.random(); // Random taking the items
     if (ran < 1 / 3) {
       level1Min++; // Take items at level 1
@@ -95,7 +96,7 @@ function getRandomItemsByLevel(level, count) {
 }
 
 function displayItem(index) {
-  if (index < 10) {
+  if (index < 20) {
     let item = selectedItems[index];
     // Update HTML with the first item's data
     document.getElementById("name").innerHTML = selectedItems[index].name;
@@ -146,7 +147,7 @@ document
   .addEventListener("click", function () {
     displayItem(index + 1);
     index = index + 1;
-    if (index >= 10) {
+    if (index >= 20) {
       stopTimer();
       document.getElementById("score").innerHTML = score;
       addResults();
@@ -160,7 +161,7 @@ document
   .addEventListener("click", function () {
     displayItem(index + 1);
     index = index + 1;
-    if (index >= 10) {
+    if (index >= 20) {
       stopTimer();
       document.getElementById("score").innerHTML = score;
       addResults();

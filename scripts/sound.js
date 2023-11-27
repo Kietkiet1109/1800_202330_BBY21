@@ -1,6 +1,8 @@
 var x = document.getElementById("myAudio");
 var audioBtn = document.getElementById("audio_btn");
 
+x.volume = 0.05;
+
 function playAudio() {
   x.play();
   audioBtn.innerHTML =

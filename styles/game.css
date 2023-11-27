@@ -104,9 +104,6 @@
 
 .bin_img {
     max-height: 90%;
-    /* width: auto;     */
-    /* height: fit-content; */
-    /* height: 90%; */
 }
 
 .bin_img img {
@@ -121,13 +118,13 @@
 
 .pop_up {
     width: 500px;
-    height: 80vh;
+    height: 85vh;
     background-color: #fff;
     border-radius: 30px;
     border: 1px solid #041B15;
     align-items: center;
     position: absolute;
-    top: 11.5%;
+    top: 9%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 90;
@@ -160,7 +157,7 @@
 }
 
 .result_icon i {
-    font-size: 100px;
+    font-size: 80px;
 }
 
 .right {
@@ -177,7 +174,7 @@
 
 .result_desc {
     padding: 0 3vw;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .result_desc a {
@@ -225,7 +222,7 @@
 }
 
 .fun_facts p {
-    font-size: 19px;
+    font-size: 16px;
 }
 
 /* fun facts css ends here */

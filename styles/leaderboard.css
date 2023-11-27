@@ -32,8 +32,28 @@ thead {
     font-weight: 700;
 }
 
+thead td:nth-child(1), thead td:nth-child(2) {
+    width: 10%;
+}
+
+thead td:nth-child(3) {
+    width: 40%;
+}
+
+thead td:nth-child(4) {
+    width: 20%;
+}
+
+thead td:nth-child(5) {
+    width: 20%;
+}
+
 tbody td {
     color: #fff;
+}
+
+tbody td:nth-child(1), tbody td:nth-child(2) {
+    width: 10%;
 }
 
 tr {
@@ -46,6 +66,30 @@ tr>td:nth-child(2) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+#first {
+    color: rgb(234, 255, 0);
+}
+
+#second {
+    color: #d1e0f0;
+}
+
+#third {
+    color: rgb(194, 123, 65);
+}
+
+.username {
+    width: 40%;
+}
+
+.score {
+    width: 20%;
+}
+
+.time {
+    width: 20%;
 }
 
 td img {
