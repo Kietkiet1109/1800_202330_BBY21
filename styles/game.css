@@ -361,6 +361,10 @@
         width: 80vw;
     }
 
+    .result_pop_up {
+        width: 80vw;
+    }
+
     .result_text {
         font-size: 25px;
     }

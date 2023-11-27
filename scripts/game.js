@@ -21,7 +21,8 @@ function playIncorrectSound() {
     audio.play();
   } else {
     audio.pause();
-  }  }
+  }  
+}
 
 var funFactsArray = []; // Array to store the fun facts from Firestore
 var itemsArray = []; // Array to store the items from Firestore
@@ -63,8 +64,8 @@ function selectRandomItems() {
   let level2Min = 1;
   let level3Min = 1;
 
-  // Randomly distribute 7 items across the 3 levels
-  for (let i = 0; i < 15; i++) {
+  // Randomly distribute all items across the 3 levels
+  for (let i = 0; i < 35; i++) {
     let ran = Math.random(); // Random taking the items
     if (ran < 1 / 3) {
       level1Min++; // Take items at level 1
@@ -96,7 +97,7 @@ function getRandomItemsByLevel(level, count) {
 }
 
 function displayItem(index) {
-  if (index < 20) {
+  if (index < 23) {
     let item = selectedItems[index];
     // Update HTML with the first item's data
     document.getElementById("name").innerHTML = selectedItems[index].name;
@@ -108,6 +109,8 @@ function displayItem(index) {
     document.getElementById("correctindex").innerHTML = index + 1; // For Correct pop-up
     document.getElementById("wrongindex").innerHTML = index + 1; // For Wrong pop-up
     document.getElementById("image").src = selectedItems[index].image;
+    document.getElementById("correctDesc").innerHTML = selectedItems[index].desc; // For Correct pop-up
+    document.getElementById("wrongDesc").innerHTML = selectedItems[index].desc; // For Wrong pop-up
   }
 }
 getItems(); // Call the function to retrieve items and store them in the array

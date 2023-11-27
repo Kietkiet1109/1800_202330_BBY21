@@ -7,7 +7,7 @@ function register() {
 
   // Validate input fields
   if (validate_email(email) == false || validate_password(password) == false) {
-    alert("Email or Password is Out of Line");
+    alert("Something is wrong with the Email/Password!");
     return;
     // Don't continue running the code
   }
@@ -24,9 +24,21 @@ function register() {
       })
       .then(() => {
         alert("New account is created!");
-        window.location.href = "login.html";
+        window.location.href = "index.html";
       });
-  });
+  })
+    .catch((error) => {
+      // Handle sign up errors here
+      // const errorCode = error.code;
+      // const errorMessage = error.message;
+
+      // if (errorCode === "auth/email-already-in-use") {
+      //   alert("This email is already in use. Please log in instead.");
+      // } else {
+      //   alert(errorMessage);
+      // }
+      alert("This email is already in use. Please log in instead.");
+    });
 }
 
 // Set up our login function
@@ -37,7 +49,7 @@ function login() {
 
   // Validate input fields
   if (validate_email(email) == false || validate_password(password) == false) {
-    alert("Email/Password is Out of Line");
+    alert("Something is wrong with the Email/Password!");
     return;
     // Don't continue running the code
   }
@@ -54,7 +66,19 @@ function login() {
         alert("You are now logged in!");
         window.location.href = "index.html";
       });
-  });
+  })
+    .catch((error) => {
+      // Handle login errors here
+      // const errorCode = error.code;
+      // const errorMessage = error.message;
+
+      // if (errorCode === "auth/user-not-found") {
+      //   alert("This account does not exist. Please sign up first.");
+      // } else {
+      //   alert(errorMessage);
+      // }
+      alert("This account does not exist. Please sign up first.");
+    });
 }
 
 // Validate Functions
