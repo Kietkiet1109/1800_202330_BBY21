@@ -81,6 +81,20 @@ function login() {
     });
 }
 
+// Allows the user to login/signup by hitting the enter key
+$(document).on("keypress", function (event) {
+  if (event.which === 13) {
+    event.preventDefault();
+    if(document.getElementById("tab_1").checked){
+      login();
+      // console.log("log in");
+    } else {
+      register();
+      // console.log("sign up");
+    }
+  }
+});
+
 // Validate Functions
 function validate_email(email) {
   expression = /^[^@]+@\w+(\.\w+)+\w$/;
