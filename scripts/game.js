@@ -151,7 +151,8 @@ $(document).ready(function () {
   });
 });
 
-/* function to make the confirmation pop up appear when click on Exit Game button */
+/* function to make the confirmation pop up appear 
+when click on Exit Game button */
 document.addEventListener("DOMContentLoaded", function () {
   var exitConfirmationPopup = document.getElementById("exitConfirmation");
   var confirmExitButton = document.getElementById("confirmExit");
@@ -159,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var exitGameButton = document.getElementById("exitGame");
 
   exitGameButton.addEventListener("click", function () {
-    // the confirmation to exit game pop up appear
+    // the CONFIRMATION TO EXIT GAME pop up appear
     exitConfirmationPopup.style.display = "flex";
 
     confirmExitButton.addEventListener("click", function () {

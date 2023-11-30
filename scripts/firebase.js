@@ -7,7 +7,14 @@ function register() {
 
   // Validate input fields
   if (validate_email(email) == false || validate_password(password) == false) {
-    alert("Something is wrong with the Email/Password!");
+    // alert("Something is wrong with the Email/Password!");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Something is wrong with the Email/Password!!",
+      confirmButtonColor: "#7FB069"
+    });
+
     return;
     // Don't continue running the code
   }
@@ -23,8 +30,20 @@ function register() {
         last_login: Date.now(),
       })
       .then(() => {
-        alert("New account is created!");
-        window.location.href = "index.html";
+        // alert("New account is created!");
+        // Swal.fire({
+        //   "New account is created!"
+        //   confirmButtonColor: "#7FB069"
+        // });
+        Swal.fire({
+          icon: "success",
+          title: "Congratulations",
+          text: "New account is created!",
+          confirmButtonColor: "#7FB069"
+        });
+        setTimeout(() => {
+          window.location.href = "index.html";
+      }, 3000);
       });
   })
     .catch((error) => {
@@ -37,7 +56,13 @@ function register() {
       // } else {
       //   alert(errorMessage);
       // }
-      alert("This email is already in use. Please log in instead.");
+      // alert("This email is already in use. Please log in instead.");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "This email is already in use. Please log in instead.",
+        confirmButtonColor: "#7FB069"
+      });
     });
 }
 
@@ -49,7 +74,13 @@ function login() {
 
   // Validate input fields
   if (validate_email(email) == false || validate_password(password) == false) {
-    alert("Something is wrong with the Email/Password!");
+    // alert("Something is wrong with the Email/Password!");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Something is wrong with the Email/Password!!",
+      confirmButtonColor: "#7FB069"
+    });
     return;
     // Don't continue running the code
   }
@@ -63,8 +94,17 @@ function login() {
         last_login: Date.now(),
       })
       .then(() => {
-        alert("You are now logged in!");
-        window.location.href = "index.html";
+        // alert("You are now logged in!");
+        // window.location.href = "index.html";
+        Swal.fire({
+          icon: "success",
+          title: "Congratulations",
+          text: "You are now logged in!",
+          confirmButtonColor: "#7FB069"
+        });
+        setTimeout(() => {
+          window.location.href = "index.html";
+      }, 3000);
       });
   })
     .catch((error) => {
@@ -77,7 +117,13 @@ function login() {
       // } else {
       //   alert(errorMessage);
       // }
-      alert("This account does not exist. Please sign up first.");
+      // alert("This account does not exist. Please sign up first.");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "This account does not exist. Please sign up first.",
+        confirmButtonColor: "#7FB069"
+      });
     });
 }
 
@@ -134,7 +180,16 @@ function logout() {
     .signOut()
     .then(() => {
       // Sign-out successful.
-      alert("You are now logged out!");
+      // alert("You are now logged out!");
+      Swal.fire({
+        icon: "success",
+        title: "Log out",
+        text: "You are now logged out!",
+        confirmButtonColor: "#7FB069"
+      });
+      setTimeout(() => {
+        window.location.href = "index.html";
+    }, 10000);
     })
     .catch((error) => {
       // An error happened.
