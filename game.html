@@ -26,7 +26,7 @@
         <div class="con_wrap">
             <ul class="game_nav">
                 <li id="exitGame">
-                    <a href="index.html"><i class="fa-solid fa-reply"></i>Exit Game</a>
+                    <a><i class="fa-solid fa-reply"></i>Exit Game</a>
                 </li>
                 <li id="timeup">
                     <i class="fa-solid fa-stopwatch" id="timer"></i>
@@ -179,6 +179,18 @@
                 </ul>
             </div>
         </div>
+
+
+        // Pop up confirmation to exit the game
+        <div class="exit_pop_up" id="exitConfirmation">
+            <div class="confirmation_box">
+                <p>Are you sure you want to exit the game?</p>
+                <button id="confirmExit">Yes</button>
+                <button id="cancelExit">No</button>
+            </div>
+        </div>
+        
+
 
         <footer id="footerPlaceholder"></footer>
     </div>

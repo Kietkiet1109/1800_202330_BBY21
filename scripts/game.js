@@ -4,11 +4,14 @@ function playCorrectSound() {
   audio.volume = 0.2; // setting default audio value to 0.2
   // If the audio is muted, the sound effect does not activate
   var audioBtn = document.getElementById("audio_btn");
-  if(audioBtn.innerHTML == '<i class="fa-solid fa-volume-high audio" onclick="pauseAudio()" type="button"></i>'){
+  if (
+    audioBtn.innerHTML ==
+    '<i class="fa-solid fa-volume-high audio" onclick="pauseAudio()" type="button"></i>'
+  ) {
     audio.play();
   } else {
     audio.pause();
-  }  
+  }
 }
 
 // Play the error sound for wrong choice.
@@ -17,11 +20,14 @@ function playIncorrectSound() {
   audio.volume = 0.2; // setting default audio value to 0.2
   // If the audio is muted, the sound effect does not activate
   var audioBtn = document.getElementById("audio_btn");
-  if(audioBtn.innerHTML == '<i class="fa-solid fa-volume-high audio" onclick="pauseAudio()" type="button"></i>'){
+  if (
+    audioBtn.innerHTML ==
+    '<i class="fa-solid fa-volume-high audio" onclick="pauseAudio()" type="button"></i>'
+  ) {
     audio.play();
   } else {
     audio.pause();
-  }  
+  }
 }
 
 var funFactsArray = []; // Array to store the fun facts from Firestore
@@ -109,7 +115,8 @@ function displayItem(index) {
     document.getElementById("correctindex").innerHTML = index + 1; // For Correct pop-up
     document.getElementById("wrongindex").innerHTML = index + 1; // For Wrong pop-up
     document.getElementById("image").src = selectedItems[index].image;
-    document.getElementById("correctDesc").innerHTML = selectedItems[index].desc; // For Correct pop-up
+    document.getElementById("correctDesc").innerHTML =
+      selectedItems[index].desc; // For Correct pop-up
     document.getElementById("wrongDesc").innerHTML = selectedItems[index].desc; // For Wrong pop-up
   }
 }
@@ -144,7 +151,31 @@ $(document).ready(function () {
   });
 });
 
-// Event listener for the Next Stage button at Correct pop-up
+/* function to make the confirmation pop up appear when click on Exit Game button */
+document.addEventListener("DOMContentLoaded", function () {
+  var exitConfirmationPopup = document.getElementById("exitConfirmation");
+  var confirmExitButton = document.getElementById("confirmExit");
+  var cancelExitButton = document.getElementById("cancelExit");
+  var exitGameButton = document.getElementById("exitGame");
+
+  exitGameButton.addEventListener("click", function () {
+    // the confirmation to exit game pop up appear
+    exitConfirmationPopup.style.display = "flex";
+
+    confirmExitButton.addEventListener("click", function () {
+      // The pop up disappears when the Yes button is clicked
+      exitConfirmationPopup.style.display = "none";
+      // Redirect to index.html or any other page
+      window.location.href = "index.html";
+    });
+
+    cancelExitButton.addEventListener("click", function () {
+      // The pop up disappears when the No button is clicked
+      exitConfirmationPopup.style.display = "none";
+    });
+  });
+});
+
 document
   .getElementById("correct_next_stage_button")
   .addEventListener("click", function () {
@@ -226,7 +257,6 @@ function displayFunFact() {
   funFactDivRight.innerHTML = randomFunFact;
   funFactDivWrong.innerHTML = randomFunFact;
 }
-// displayFunFact(); // call the displayFunFact function
 
 // Function to add the results to FireStore
 function addResults() {
@@ -236,23 +266,23 @@ function addResults() {
     Time: currentTime,
     Score: score,
     Max: index,
-    Date: new Date() // captures the current date and time
+    Date: new Date(), // captures the current date and time
   };
 
-  db.collection("games").add(gameResult)
+  db.collection("games")
+    .add(gameResult)
     .then((docRef) => {
-        console.log("Game result has been recorded");
-  })
+      console.log("Game result has been recorded");
+    });
 }
 
 // Function to generate the gameID
 function generateGameID() {
-
-  // Generate a random gameID between 00000 and 99999 
+  // Generate a random gameID between 00000 and 99999
   const rannum = Math.floor(Math.random() * 100000);
 
   // Convert the number to a string that has 5 characters
-  const gameID = String(rannum).padStart(5, '0');
+  const gameID = String(rannum).padStart(5, "0");
 
   return gameID;
 }
@@ -260,17 +290,17 @@ function generateGameID() {
 // Function to get displayName
 function getdisplayName() {
   // Check if the user is logged in:
-  firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-          currentUser = db.collection("users").doc(user.uid);
-          currentUser.get().then(userDoc => {
-              // Get the displayName
-              userName = userDoc.data().displayName;
-              console.log(userName);
-          })
-      } else {
-          console.log("No user is logged in."); // Log a message when no user is logged in
-      }
-  })
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      currentUser = db.collection("users").doc(user.uid);
+      currentUser.get().then((userDoc) => {
+        // Get the displayName
+        userName = userDoc.data().displayName;
+        console.log(userName);
+      });
+    } else {
+      console.log("No user is logged in."); // Log a message when no user is logged in
+    }
+  });
 }
 getdisplayName();
