@@ -9,9 +9,9 @@ function register() {
   if (validate_email(email) == false || validate_password(password) == false) {
     // alert("Something is wrong with the Email/Password!");
     Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Something is wrong with the Email/Password!!",
+      icon: "warning",
+      title: "Invalid email",
+      text: "Please enter a valid email address.",
       confirmButtonColor: "#7FB069"
     });
 
@@ -58,8 +58,8 @@ function register() {
       // }
       // alert("This email is already in use. Please log in instead.");
       Swal.fire({
-        icon: "error",
-        title: "Oops...",
+        icon: "warning",
+        title: "Ooops!",
         text: "This email is already in use. Please log in instead.",
         confirmButtonColor: "#7FB069"
       });
@@ -76,9 +76,9 @@ function login() {
   if (validate_email(email) == false || validate_password(password) == false) {
     // alert("Something is wrong with the Email/Password!");
     Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Something is wrong with the Email/Password!!",
+      icon: "warning",
+      title: "Invalid email",
+      text: "Please enter a valid email address.",
       confirmButtonColor: "#7FB069"
     });
     return;
