@@ -1,5 +1,5 @@
 .desc {
-    width: 75%;
+    width: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -11,6 +11,7 @@
 
 .learn_more {
     margin-top: 10px;
+    font-size: 16px;
 }
 
 .learn_more a {
@@ -46,13 +47,17 @@
     }
 
     .desc {
+        width: 95%;
         height: 80%;
-        /* font-size: 15px; */
     }
 
     .desc h3 {
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
+    }
+
+    .learn_more {
+        padding: 0 3vw;
     }
 }
 
