@@ -35,6 +35,7 @@ var itemsArray = []; // Array to store the items from Firestore
 var selectedItems = []; // Array to store 20 random items for each game
 let index = 0;
 let score = 0;
+let maxstage = 20;
 const gameID = generateGameID();
 function getItems() {
   db.collection("items")
@@ -45,8 +46,8 @@ function getItems() {
       });
       sortItemsLevel(); // Sort by level in ascending order
       selectedItems = selectRandomItems(); // Select random items based on level
-      // console.log(itemsArray); // Log all the items from Firestore
-      // console.log(selectedItems); // Log 20 selected items for current game
+      console.log(itemsArray); // Log all the items from Firestore
+      console.log(selectedItems); // Log 20 selected items for current game
       displayItem(index);
     });
 }
@@ -71,7 +72,7 @@ function selectRandomItems() {
   let level3Min = 1;
 
   // Randomly distribute all items across the 3 levels
-  for (let i = 0; i < 35; i++) {
+  for (let i = 0; i < maxstage; i++) {
     let ran = Math.random(); // Random taking the items
     if (ran < 1 / 3) {
       level1Min++; // Take items at level 1
@@ -97,13 +98,13 @@ function getRandomItemsByLevel(level, count) {
   while (randomItems.length < count && itemsOfLevel.length > 0) {
     let randomIndex = Math.floor(Math.random() * itemsOfLevel.length);
     randomItems.push(itemsOfLevel[randomIndex]);
-    itemsOfLevel.splice(randomIndex, 1); // Remove the selected item to avoid duplicates
+    itemsOfLevel.splice(randomIndex, 1); // Remove the selected duplicated item 
   }
   return randomItems;
 }
 
 function displayItem(index) {
-  if (index < 23) {
+  if (index < maxstage) {
     let item = selectedItems[index];
     // Update HTML with the first item's data
     document.getElementById("name").innerHTML = selectedItems[index].name;
@@ -182,7 +183,7 @@ document
   .addEventListener("click", function () {
     displayItem(index + 1);
     index = index + 1;
-    if (index >= 20) {
+    if (index >= maxstage) {
       stopTimer();
       document.getElementById("score").innerHTML = score;
       addResults();
@@ -196,7 +197,7 @@ document
   .addEventListener("click", function () {
     displayItem(index + 1);
     index = index + 1;
-    if (index >= 20) {
+    if (index >= maxstage) {
       stopTimer();
       document.getElementById("score").innerHTML = score;
       addResults();
