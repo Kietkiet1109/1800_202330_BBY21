@@ -261,7 +261,12 @@ function displayFunFact() {
 }
 
 // Function to add the results to FireStore
-function addResults() {
+async function addResults() {
+  await auth.onAuthStateChanged(user => {
+    if (!user) {
+        return;
+    }
+  })
   const gameResult = {
     GameID: gameID,
     UserName: userName,

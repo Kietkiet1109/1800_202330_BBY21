@@ -83,7 +83,7 @@
         
         <div class="pop_up" id="correctpopup">
             <div class="result">
-                <p>Stage <span id="correctindex"></span> / 5</p>
+                <p>Stage <span id="correctindex"></span> / 20</p>
                 <div class="result_icon">
                     <i class="fa-regular fa-circle-check right"></i>
                 </div>
@@ -112,7 +112,7 @@
 
         <div class="pop_up" id="wrongpopup">
             <div class="result">
-                <p>Stage <span id="wrongindex"></span> / 5</p>
+                <p>Stage <span id="wrongindex"></span> / 20</p>
                 <div class="result_icon">
                     <i class="fa-regular fa-circle-xmark wrong"></i>
                 </div>
@@ -144,7 +144,48 @@
                 <i class="fa-solid fa-crown"></i>
                 <div class="result_desc_wrap">
                     <h2>You scored</h2>
-                    <p><h3 id="score"></h3> / 5 in <h3 id="time"></h3></p>
+                    <p><h3 id="score"></h3> / 20 in <h3 id="time"></h3></p>
+                    <p class="highest_score">
+                        <h3>Your highest score is:</h3>
+                        <p>
+                            <span id="highest_score"></span> / <span id="max"></span> in <span id="highest_time"></span>
+                        </p>
+                    </p>
+                    <p class="place"><span id="place"></span></p>
+                </div>
+                <div class="result_learnmore">
+                    If you want to learn more about recycling,
+                    <a href="learn_more.html" class="result_learnmore_link">check this out!</a>
+                </div>
+                <ul class="btn_wrap result_wrap">
+                    <li class="result_btn leaderboard_btn">
+                        <a href="leaderboard.html">
+                            <i class="fa-solid fa-award"></i> Leaderboard
+                        </a>
+                    </li>
+                    <li class="result_btn">
+                        Share my Result <i class="fa-solid fa-share-nodes"></i>
+                    </li>
+                    <li class="home_btn">
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i> Go Home
+                        </a>
+                    </li>
+                    <li class="replay result_btn">
+                        <a href="game.html">
+                            Replay <i class="fa-solid fa-rotate-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="result_pop_up" id="resultpopupNotLoggedIn">
+            <div class="result">
+                <i class="fa-solid fa-crown"></i>
+                <div class="result_desc_wrap">
+                    <h2>You scored</h2>
+                    <p><h3 id="score"></h3> / 20 in <h3 id="time"></h3></p>
                     <p class="highest_score">
                         <h3>Your highest score is:</h3>
                         <p>
