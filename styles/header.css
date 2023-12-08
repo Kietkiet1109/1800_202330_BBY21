@@ -19,6 +19,10 @@ header {
     height: 100%;
 }
 
+.logo img {
+    object-fit: contain;
+}
+
 .menu_wrap {
     width: auto;
     display: flex;
@@ -44,7 +48,8 @@ header {
 }
 
 label {
-    width: 40px;
+    /* width: 40px; */
+    margin-left: 15px;
     height: 60px;
     color: #041B15;
     display: flex;
@@ -90,6 +95,20 @@ label {
 }
 
 @media screen and (max-width: 344px) {
+
+    .login {
+        font-size: 18px;
+        /* padding: 8px 20px; */
+    }
+
+    .menu {
+        font-size: 20px;
+    }
+
+    label {
+        margin-left: 5px;
+    }
+
     #menu:checked~.drop_down {
         height: 250px;
     }

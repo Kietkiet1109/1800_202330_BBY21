@@ -1,7 +1,7 @@
 .con_wrap {
     width: 90%;
-    height: calc(100vh - 100px - 5vh);
-    margin: 2.5vh auto;
+    height: calc(100vh - 100px);
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,13 +14,12 @@
 
 .login_wrap {
     width: 50%;
-    height: 100%;
 }
 
 .login_img_wrap {
     width: 25vh;
     height: 25vh;
-    margin: 40px auto 20px auto;
+    margin: 0 auto 20px auto;
     border-radius: 50%;
     border: 1px solid #041B15;
     overflow: hidden;
@@ -133,10 +132,6 @@ b{
         width: 100%;
     }
 
-    .login_img_wrap {
-        margin: 20px auto;
-    }
-
     .input_wrap {
         width: 50%;
     }
@@ -144,11 +139,18 @@ b{
     .login_signup label {
         font-size: 16px;
     }
-
 }
 
 @media screen and (max-width: 600px) {
     .input_wrap {
-        width: 80%;
+        width: 90%;
+    }
+
+    #login, #signup {
+        font-size: 15px;
+    }
+
+    #login_submit, #signup_submit {
+        padding: 5px 0;
     }
 }

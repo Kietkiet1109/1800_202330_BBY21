@@ -1,6 +1,5 @@
-.desc {
-    width: 80%;
-    font-size: 25px;
+.button_wrap i {
+    margin-right: 5px;
 }
 
 .fa-square-facebook {
@@ -25,11 +24,11 @@
 
 @media screen and (max-width: 700px) {
     .desc {
-        height: 30%;
-        font-size: 18px;
+        height: 40%;
+        font-size: 16px;
     }
 
     .button_wrap {
-        height: 70%;
+        height: 60%;
     }
 }

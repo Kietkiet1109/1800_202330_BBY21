@@ -19,14 +19,9 @@
     text-decoration: underline;
 }
 
-.con div:nth-child(2) {
-    margin-top: 20px;
-}
-
 @media screen and (max-width: 900px) {
     .con_wrap {
         width: 100%;
-        height: auto;
         flex-direction: column;
         margin-top: 0;
     }
@@ -40,9 +35,6 @@
     .con {
         width: 100%;
         height: 45vh;
-    }
-
-    .con div:nth-child(2) {
         margin-top: 10px;
     }
 
@@ -52,7 +44,7 @@
     }
 
     .desc h3 {
-        font-size: 18px;
+        font-size: 20px;
         text-align: center;
     }
 
@@ -64,15 +56,18 @@
 @media screen and (max-width: 700px) {
     .main_banner {
         width: 80%;
-        height: 20vh;
-        margin: 20px auto 20px auto;
+        height: 20%;
+        margin: 0 auto;
+        padding: 0;
     }
     
     .desc {
         font-size: 15px;
+        padding: 0 10px;
     }
 
     .con {
-        height: 55vh;
+        height: 80%;
+        margin-top: 25px;
     }
 }

@@ -21,7 +21,7 @@
   /* Adjust the width as per your design, leaving a little space for margins */
   /* Add margin between cards */
   margin: 0 0 2vh 0;
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   border-radius: 10px;
   background-color: #7FB069;
   overflow: hidden;
@@ -29,7 +29,7 @@
 
 .gameID {
   background-color: #134611;
-  border-bottom: 3px solid #000000;
+  border-bottom: 2px solid #000000;
   color: #fff;
   font-size: 20px;
   font-weight: 500;
