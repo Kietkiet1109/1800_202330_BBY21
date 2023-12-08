@@ -66,28 +66,11 @@ function sortItemsLevel() {
 
 // Select random items based on level
 function selectRandomItems() {
-  // Make sure each level has at least 1 item
-  let level1Min = 1;
-  let level2Min = 1;
-  let level3Min = 1;
-
-  // Randomly distribute all items across the 3 levels
-  for (let i = 0; i < maxstage; i++) {
-    let ran = Math.random(); // Random taking the items
-    if (ran < 1 / 3) {
-      level1Min++; // Take items at level 1
-    } else if (ran < 2 / 3) {
-      level2Min++; // Take items at level 2
-    } else {
-      level3Min++; // Take items at level 3
-    }
-  }
-
   // Collect the random items from each level
   return [
-    ...getRandomItemsByLevel(1, level1Min),
-    ...getRandomItemsByLevel(2, level2Min),
-    ...getRandomItemsByLevel(3, level3Min),
+    ...getRandomItemsByLevel(1, 8),
+    ...getRandomItemsByLevel(2, 7),
+    ...getRandomItemsByLevel(3, 5),
   ];
 }
 
@@ -106,19 +89,19 @@ function getRandomItemsByLevel(level, count) {
 function displayItem(index) {
   if (index < maxstage) {
     let item = selectedItems[index];
+
     // Update HTML with the first item's data
-    document.getElementById("name").innerHTML = selectedItems[index].name;
-    document.getElementById("right_name").innerHTML = selectedItems[index].name; // For Correct pop-up
-    document.getElementById("wrong_name").innerHTML = selectedItems[index].name; // For Wrong pop-up
-    document.getElementById("level").innerHTML = selectedItems[index].level;
-    document.getElementById("correctbin").innerHTML = selectedItems[index].bin; // For Correct pop-up
-    document.getElementById("wrongbin").innerHTML = selectedItems[index].bin; // For Wrong pop-up
+    document.getElementById("name").innerHTML = item.name;
+    document.getElementById("right_name").innerHTML = item.name; // For Correct pop-up
+    document.getElementById("wrong_name").innerHTML = item.name; // For Wrong pop-up
+    document.getElementById("level").innerHTML = item.level;
+    document.getElementById("correctbin").innerHTML = item.bin; // For Correct pop-up
+    document.getElementById("wrongbin").innerHTML = item.bin; // For Wrong pop-up
     document.getElementById("correctindex").innerHTML = index + 1; // For Correct pop-up
     document.getElementById("wrongindex").innerHTML = index + 1; // For Wrong pop-up
-    document.getElementById("image").src = selectedItems[index].image;
-    document.getElementById("correctDesc").innerHTML =
-      selectedItems[index].desc; // For Correct pop-up
-    document.getElementById("wrongDesc").innerHTML = selectedItems[index].desc; // For Wrong pop-up
+    document.getElementById("image").src = item.image;
+    document.getElementById("correctDesc").innerHTML = item.desc; // For Correct pop-up
+    document.getElementById("wrongDesc").innerHTML = item.desc; // For Wrong pop-up
   }
 }
 getItems(); // Call the function to retrieve items and store them in the array
