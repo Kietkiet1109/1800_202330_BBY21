@@ -138,27 +138,34 @@ $(document).ready(function () {
 /* function to make the confirmation pop up appear 
 when click on Exit Game button */
 document.addEventListener("DOMContentLoaded", function () {
+  var correctPopUpExitGame = document.getElementById("correctHomeBtn");
+  var wrongPopUpExitGame = document.getElementById("wrongHomeBtn");
+  
   var exitConfirmationPopup = document.getElementById("exitConfirmation");
   var confirmExitButton = document.getElementById("confirmExit");
   var cancelExitButton = document.getElementById("cancelExit");
   var exitGameButton = document.getElementById("exitGame");
+  function confirmation(target){
+    target.addEventListener("click", function () {
+      // the CONFIRMATION TO EXIT GAME pop up appear
+      exitConfirmationPopup.style.display = "flex";
 
-  exitGameButton.addEventListener("click", function () {
-    // the CONFIRMATION TO EXIT GAME pop up appear
-    exitConfirmationPopup.style.display = "flex";
+      confirmExitButton.addEventListener("click", function () {
+        // The pop up disappears when the Yes button is clicked
+        exitConfirmationPopup.style.display = "none";
+        // Redirect to index.html or any other page
+        window.location.href = "index.html";
+      });
 
-    confirmExitButton.addEventListener("click", function () {
-      // The pop up disappears when the Yes button is clicked
-      exitConfirmationPopup.style.display = "none";
-      // Redirect to index.html or any other page
-      window.location.href = "index.html";
+      cancelExitButton.addEventListener("click", function () {
+        // The pop up disappears when the No button is clicked
+        exitConfirmationPopup.style.display = "none";
+      });
     });
-
-    cancelExitButton.addEventListener("click", function () {
-      // The pop up disappears when the No button is clicked
-      exitConfirmationPopup.style.display = "none";
-    });
-  });
+  }
+  confirmation(exitGameButton);
+  confirmation(correctPopUpExitGame);
+  confirmation(wrongPopUpExitGame);
 });
 
 document

@@ -328,8 +328,7 @@
 
 /* confirmation pop up ends here */
 
-@media screen and (max-width: 800px) {
-
+@media screen and (max-width: 600px) {
     .item_wrap {
         padding: 0 5vw;
     }
@@ -363,12 +362,16 @@
         height: 20%;
     }
 
+    .fun_facts {
+        width: 90%;
+    }
+
     .fun_facts h1 {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .fun_facts p {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .btn_wrap {
@@ -387,7 +390,7 @@
     }
 
     .result_icon i {
-        font-size: 70px;
+        font-size: 60px;
     } 
 
     .result_desc p, .result_learnmore {
@@ -405,7 +408,7 @@
     }
 
     .pop_up {
-        width: 80vw;
+        width: 90vw;
     }
 
     .result_pop_up {
@@ -413,11 +416,12 @@
     }
 
     .result_text {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .result_desc {
-        font-size: 16px;
+        font-size: 15px;
         text-align: center;
+        padding: 0 8px;
     }
 }
