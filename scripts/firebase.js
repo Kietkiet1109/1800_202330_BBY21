@@ -43,7 +43,7 @@ function register() {
         });
         setTimeout(() => {
           window.location.href = "index.html";
-      }, 3000);
+        }, 1500);
       });
   })
     .catch((error) => {
@@ -104,7 +104,7 @@ function login() {
         });
         setTimeout(() => {
           window.location.href = "index.html";
-      }, 3000);
+        }, 1500);
       });
   })
     .catch((error) => {
@@ -131,7 +131,7 @@ function login() {
 $(document).on("keypress", function (event) {
   if (event.which === 13) {
     event.preventDefault();
-    if(document.getElementById("tab_1").checked){
+    if (document.getElementById("tab_1").checked) {
       login();
       // console.log("log in");
     } else {
@@ -189,7 +189,7 @@ function logout() {
       });
       setTimeout(() => {
         window.location.href = "index.html";
-    }, 10000);
+      }, 2000);
     })
     .catch((error) => {
       // An error happened.

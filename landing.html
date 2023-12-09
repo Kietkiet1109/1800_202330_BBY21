@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/header.css" />
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/pop_up.css">
   <link rel="stylesheet" href="styles/footer.css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -40,8 +41,8 @@
       <div class="con">
         <div class="desc">How to play our game!</div>
         <ul class="button_wrap">
-          <li>
-            <a id="play" href="game.html"> PLAY </a>
+          <li id="playGame">
+            PLAY
           </li>
           <li>
             <a href="index.html"> Go back to Home </a>
@@ -56,6 +57,15 @@
       </div>
     </div>
 
+    <!-- Pop up confirmation to exit the game -->
+    <div class="exit_pop_up" id="exitConfirmation">
+      <div class="confirmation_box">
+        <p>You are not logged in. This means your game data will not be saved. Are you sure you want to proceed?</p>
+        <button id="confirmExit">No</button>
+        <button id="cancelExit">Yes</button>
+      </div>
+    </div>
+
     <footer id="footerPlaceholder"></footer>
   </div>
 
@@ -63,6 +73,9 @@
   <script src="scripts/items.js"></script>
   <script src="scripts/skeleton.js"></script>
   <script src="scripts/funfact.js"></script>
+  <script src="scripts/start.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>

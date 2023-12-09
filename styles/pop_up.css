@@ -1,0 +1,46 @@
+/* confirmation pop up to exit the game*/
+/* CSS cho pop-up xác nhận */
+
+.exit_pop_up {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.confirmation_box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.confirmation_box p {
+    margin-bottom: 20px;
+}
+
+.confirmation_box button {
+    background: #2e8b57;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirmation_box button:hover {
+    background: #2e8b57;
+}
+
+@media screen and (max-width: 400px) {
+    .confirmation_box {
+        width: 85%;
+    }
+}
