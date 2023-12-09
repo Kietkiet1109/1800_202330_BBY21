@@ -16,6 +16,7 @@
 }
 
 #who {
+    margin-top: 10px;
     font-size: 23px;
 }
 
@@ -46,6 +47,10 @@
     text-align: center;
 }
 
+#description p {
+    margin-top: 10px;
+}
+
 @media screen and (max-width: 900px) {
     .content {
         padding: 5vw;
@@ -69,7 +74,7 @@
     }
 
     .role {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .picture_wrap {

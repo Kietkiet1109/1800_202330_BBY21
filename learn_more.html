@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BBY21 Learn more</title>
 
-    <link href="img/favicon.png" rel="icon" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/learn_more.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BBY21 Learn more</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <link href="img/favicon.png" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/learn_more.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  </head>
-  <body>
-    <div class="wrap">
-      <header id="navbarPlaceholder"></header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <div class="con_wrap">
-        <div class="main_banner">
-          <img src="img/learnmore_main_img.jpg" alt="" />
-        </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
 
-        <div class="con">
-          <div class="desc">
-            <h3>Why is recycling important?</h3>
-            <p class="learn_more">
-              - It conserves valuable resources and reduces the need for raw
-              materials, which helps preserve natural habitats and biodiversity.
-              <br />
-              - Recycling minimizes the energy required to produce new products,
-              leading to a decrease in greenhouse gas emissions and combating
-              climate change. <br />
-              - It reduces the strain on landfills, promoting sustainable waste
-              management practices.
-            </p>
-          </div>
-          <div class="desc">
-            <h3>What is our local recycling regulations?</h3>
-            <p class="learn_more">
-              If you want to learn about local recycling regulations,<a
-                id="regulation"
-                href="https://www2.gov.bc.ca/assets/gov/environment/waste-management/recycling/recycle/recycle_reg_guide.pdf"
-                target="_blank"
-                >check this out!</a
-              >
-            </p>
-          </div>
-        </div>
+<body>
+  <div class="wrap">
+    <header id="navbarPlaceholder"></header>
+
+    <div class="con_wrap">
+      <div class="main_banner">
+        <img src="img/test.jpg" alt="" />
       </div>
 
-      <footer id="footerPlaceholder"></footer>
+      <div class="con">
+        <div class="desc">
+          <h3>Why is recycling important?</h3>
+          <p class="learn_more">
+            - It conserves valuable resources and reduces the need for raw
+            materials, which helps preserve natural habitats and biodiversity.
+            <br /><br />
+            - Recycling minimizes the energy required to produce new products,
+            leading to a decrease in greenhouse gas emissions and combating
+            climate change. <br /><br />
+            - It reduces the strain on landfills, promoting sustainable waste
+            management practices.
+          </p>
+        </div>
+        <div class="desc">
+          <h3>What is our local recycling regulations?</h3>
+          <p class="learn_more">
+            - If you want to learn more about the offcial recycling regulations of BC,
+            <a id="regulation"
+              href="https://www2.gov.bc.ca/assets/gov/environment/waste-management/recycling/recycle/recycle_reg_guide.pdf"
+              target="_blank">
+              click here!
+            </a>
+            <br/><br/>
+            - If you are unsure of which bin to use to throw something away,
+            <a href="learn_more.html" class="result_learnmore_link">check this out!</a>
+          </p>
+        </div>
+      </div>
     </div>
 
-    <script src="scripts/firebaseAPI_BBY21.js"></script>
-    <script src="scripts/skeleton.js"></script>
-  </body>
+    <footer id="footerPlaceholder"></footer>
+  </div>
+
+  <script src="scripts/firebaseAPI_BBY21.js"></script>
+  <script src="scripts/skeleton.js"></script>
+</body>
+
 </html>

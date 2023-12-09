@@ -113,3 +113,12 @@ label {
         height: 250px;
     }
 }
+
+@media screen and (max-width: 310px) {
+    .login {
+        padding: 8px 15px;
+    }
+    .logo {
+        height: 80%;
+    }
+}
