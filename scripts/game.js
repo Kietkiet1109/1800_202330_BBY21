@@ -111,7 +111,7 @@ function checkBinSelection(userSelectedBin) {
   const correctBin = selectedItems[index].bin;
   if (userSelectedBin === correctBin) {
     // Correct bin selected
-    score = score + 1;
+    score += 1;
     $("#correctpopup").fadeIn(); // Show correct pop-up
     displayFunFact();
     playCorrectSound(); // correct sound plays
@@ -296,6 +296,7 @@ function getdisplayName() {
         console.log(userName);
       });
     } else {
+      alert("You need to log in to save your datas.");
       console.log("No user is logged in."); // Log a message when no user is logged in
     }
   });

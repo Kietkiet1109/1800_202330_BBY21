@@ -4,12 +4,17 @@ const highestscores = []; // Array for top 6 highest scores
 function getHighestScores() {
   db.collection("games")
     .orderBy("Score", "desc") // Sort by score from highest to lowest
-    .limit(6) // Fetch top 6 highest scores
     .get()
     .then(querySnapshot => {
+        const userNames = [];
         querySnapshot.forEach(doc => {
             // Add data from Firestore to Array
-            highestscores.push(doc.data());
+            if (!userNames.includes(doc.data().UserName)) {
+                userNames.push(doc.data().UserName);
+                highestscores.push(doc.data());
+                // console.log(highestscores)
+            }
+            highestscores.slice(0,7)
         });
 
         highestscores.sort((a, b) => {
@@ -61,6 +66,7 @@ function getdisplayName(callback) {
           callback(userName); // Call the callback function with userName
         })
       } else {
+        alert("You need to log in to save your datas.");
         console.log("No user is logged in."); // Log a message when no user is logged in
       }
     })
