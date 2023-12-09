@@ -3,7 +3,7 @@ footer {
     height: 40px;
     background-color: #134611;
     color: #fff;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     font-size: 16px;
