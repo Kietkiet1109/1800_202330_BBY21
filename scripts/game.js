@@ -296,7 +296,6 @@ function getdisplayName() {
         console.log(userName);
       });
     } else {
-      alert("You need to log in to save your datas.");
       console.log("No user is logged in."); // Log a message when no user is logged in
     }
   });

@@ -1,6 +1,6 @@
 .leaderboard {
     width: 60%;
-    height: 60vh;
+    height: 400px;
     background-color: #5f9944;
     border-radius: 15px;
     border: 1px solid #041B15;
@@ -99,9 +99,7 @@ td img {
 
 @media screen and (max-width: 700px) {
     .leaderboard {
-        width: 80%;
-        /* height: 60vh; */
-        margin: 20px auto;
+        width: 90%;
         font-size: 16px;
     }
 }
