@@ -257,6 +257,9 @@ async function addResults() {
         return;
     }
   })
+  if (score > 20){
+    score == 20;
+  }
   const gameResult = {
     GameID: gameID,
     UserName: userName,
